@@ -27,16 +27,8 @@
   roles: Modeling app
   photo: https://avatars.githubusercontent.com/u/12842868?v=4
 
-- name: Birk Johansson
-  roles: Modeling app
-  photo: https://www.mn.uio.no/hisp/personer/birkbj/me.png?alt=thumbnail
-
-- name: Kai Vandivier
-  roles: Deployment automation, extensibility
-  photo: ../assets/images/team/kai.png
-
-- name: Brian O'Donnel
-  roles: Coordination support, implementation, DHIS2 strategic adviser, epidimiologist, Chap website
+- name: Brian O'Donnell
+  roles: Strategic adviser, epidemiologist
   photo: ../assets/images/team/brian.png
 
 - name: Rebecca Potter
