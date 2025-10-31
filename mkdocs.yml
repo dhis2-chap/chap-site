@@ -1,75 +1,39 @@
-
-site_name: Chap Modeling Platform
+site_name: DHIS2 Modeling
 site_url: https://dhis2-chap.github.io/chap-site
-repo_url: https://github.com/dhis2-chap
-
 theme:
   name: material
-  logo: assets/images/chap-logo.png
-  favicon: assets/images/chap-logo.png
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: green
-      accent: green
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: green
-      accent: green
+  custom_dir: docs/overrides
   features:
     - navigation.instant
-    - navigation.sections
-    - navigation.tabs
+    - navigation.tracking
+    - content.code.copy
+    - content.action.edit
     - toc.integrate
-    - content.code.annotate
-    - content.tabs.link
+  palette:
+    - scheme: default
+      primary: white
+      accent: blue
+    - scheme: slate
+      primary: black
+      accent: blue
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  font:
+    text: Roboto
+    code: Roboto Mono
+extra_css:
+  - assets/stylesheets/style.css
 
-nav:
-  - Home: index.md
-  - Guides:
-      - Introduction: guides/index.md
-      - Model Development:
-        - Creating Your Model: guides/contribute_model.md
-        - Configuring Your Model: guides/configure_model.md
-        - Loading Your Model into Chap: guides/loading_model.md
-      - Model Evaluation:
-        - Evaluation Metrics: guides/metrics.md
-      - Need Help?: 
-        - Support: guides/support.md
-  - Models:
-      - Supported Models: models/models/index.md
-  - About:
-      - What is Chap?: about/index.md
-      - Motivation: about/motivation.md
-      - Meet the team: about/team.md
-      - Partners: about/partners.md
-      - Roadmap: about/roadmap.md
+extra:
+  generator: false
+
+# Add header/footer templates
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js
 
 plugins:
   - search
-  - mkdocs-video
-  - gen-files:
-      scripts:
-        - docs/scripts/gen_model_gallery.py
-        - docs/scripts/gen_team_gallery.py
 
-extra_css:
-  - assets/stylesheets/extra.css
-
-markdown_extensions:
-  - admonition
-  - codehilite
-  - attr_list
-  - md_in_html
-  - pymdownx.superfences
-  - pymdownx.tabbed
-  - pymdownx.details
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.blocks.caption
-  - toc:
-      permalink: true
+nav:
+  - index.md
+  - About: about.md
