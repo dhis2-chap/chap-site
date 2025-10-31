@@ -35,5 +35,8 @@ plugins:
   - search
 
 nav:
-  - index.md
-  - About: about.md
+  - 'Home': index.md
+  - 'Guides & Tutorials': index.md
+  - 'Documentation': index.md
+  - 'Community': index.md
+  - 'About': about.md

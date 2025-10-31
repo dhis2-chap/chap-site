@@ -59,6 +59,11 @@ body {
 }
 
 /* Footer styles */
+footer {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 footer.article {
   background-color: rgb(48, 56, 70) !important;
   color: white;
@@ -150,6 +155,9 @@ article > main > div > div:first-child {
 
 /* Adjust styles for banner section on landing page */
 .dhis2-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-top: 0;
   background-color: rgb(2, 32, 79);
   margin-left: -500px;
@@ -322,3 +330,54 @@ article > main > div > div:first-child {
 .dark .dhis2-justified .myst-card-body {
   background-color: transparent;
 }
+
+/* cards grid */
+.dhis2-cards {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+
+/* banner image stack effect */
+
+.image-stack {
+  position: relative;
+  width: 50%;            /* or auto / % */
+  perspective: 1000px;     /* enables 3D rotations */
+}
+
+/* base image styles */
+.stack-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px !important;
+  height: 180px !important;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform-origin: center bottom;
+  transition: transform 0.3s ease, left 0.3s ease;
+}
+
+/* 3 layers with offsets + 3D tilt */
+.img-1 {
+  transform: rotateY(-10deg) rotateX(2deg);
+  left: 0;
+  z-index: 3;
+}
+.img-2 {
+  transform: rotateY(-5deg) rotateX(2deg);
+  left: 50px;
+  z-index: 2;
+}
+.img-3 {
+  transform: rotateY(-2deg) rotateX(2deg);
+  left: 100px;
+  z-index: 1;
+}
+
+/* optional hover effect for interactivity
+.image-stack:hover .stack-img {
+  transform: rotateY(0deg) rotateX(0deg) translateY(-5px);
+}
+*/
