@@ -62,6 +62,8 @@ body {
 footer {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
 
 footer.article {
@@ -177,6 +179,10 @@ article > main > div > div:first-child {
   margin-bottom: 30px;
 }
 
+.dhis2-banner-image {
+  
+}
+
 /* Centered section below banner on landing page */
 .dhis2-centered .py-20 {
   padding-top: 0;
@@ -217,7 +223,6 @@ article > main > div > div:first-child {
 .dhis2-users .myst-card-body {
   position: relative;
   margin: 12px 0;
-  height: 140px;
 }
 
 .dhis2-users img {
@@ -338,46 +343,6 @@ article > main > div > div:first-child {
   margin: 50px;
 }
 
-/* banner image stack effect */
-
-.image-stack {
-  position: relative;
-  width: 50%;            /* or auto / % */
-  perspective: 1000px;     /* enables 3D rotations */
+.myst-card-body img {
+  width: 20%;
 }
-
-/* base image styles */
-.stack-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300px !important;
-  height: 180px !important;
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transform-origin: center bottom;
-  transition: transform 0.3s ease, left 0.3s ease;
-}
-
-/* 3 layers with offsets + 3D tilt */
-.img-1 {
-  transform: rotateY(-10deg) rotateX(2deg);
-  left: 0;
-  z-index: 3;
-}
-.img-2 {
-  transform: rotateY(-5deg) rotateX(2deg);
-  left: 50px;
-  z-index: 2;
-}
-.img-3 {
-  transform: rotateY(-2deg) rotateX(2deg);
-  left: 100px;
-  z-index: 1;
-}
-
-/* optional hover effect for interactivity
-.image-stack:hover .stack-img {
-  transform: rotateY(0deg) rotateX(0deg) translateY(-5px);
-}
-*/

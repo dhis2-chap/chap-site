@@ -6,24 +6,22 @@ hide:
 
 <!-- === BANNER SECTION === -->
 <div class="dhis2-banner">
-  <div style="padding:3rem 1rem;">
+  <div class="dhis2-banner-text" style="padding:3rem 1rem;">
     <h2 style="color:white; font-size:2.2rem;">Chap & Modeling Portal</h2>
     <p style="color:white; font-size:1.1rem; max-width:700px; margin:auto;">
       Welcome to online community for climate and health modeling and forecasting with DHIS2 and the Chap Modeling Platform
     </p>
   </div>
-  <div class="image-stack">
-    <img src="assets/images/banner3.png" alt="Panel 1" class="stack-img img-1">
-    <img src="assets/images/banner2.png" alt="Panel 2" class="stack-img img-2">
-    <img src="assets/images/banner1.png" alt="Panel 3" class="stack-img img-3">
+  <div class="dhis2-banner-img">
+    <img src="assets/images/CHAP-Page-Vizualizations.png" alt="Chap Visualizations">
   </div>
 </div>
 
 ---
 
 <!-- === CENTERED INTRO SECTION === -->
-<div class="dhis2-centered">
-  <h3>A robust open-source platform for climate and health modeling</h3>
+<div class="dhis2-justified">
+  <h3 style="text-align:center">A robust open-source platform for climate and health modeling</h3>
   <p>
     Chap is a Climate & Health Modeling Platform that brings together climate health models into a unified ecosystem, connecting researchers and cutting-edge epidimiological models to policy makers and health practitioners. It makes complex modeling workflows accessible, automates rigorous validation, and integrates directly with DHIS2, the world's leading health information system.
   </p>
@@ -37,28 +35,41 @@ hide:
     
     <div class="myst-card">
       <div class="myst-card-body">
-        <img src="images/data-engineers.svg" alt="Data Engineer" height="70">
-        <p><strong>Modelers</strong></p>
-        <a href="./data-engineer/" class="md-button">Get started</a>
+        <img src="assets/images/Modelers_Get-started-icon.svg" alt="Modellers" height="70">
+        <p>
+          <strong>Modelers</strong>
+          <br>
+          <a href="">Get started</a>
+        </p>
       </div>
     </div>
 
     <div class="myst-card">
       <div class="myst-card-body">
-        <img src="images/data-scientists.svg" alt="Data Scientist" height="70">
-        <p><strong>Implementers</strong></p>
-        <a href="./data-scientist/" class="md-button">Get started</a>
+        <img src="assets/images/Implementers_Get-started-icon.svg" alt="Implementers" height="70">
+        <p>
+          <strong>Implementers</strong>
+          <br>
+          <a href="">Get started</a>
+        </p>
       </div>
     </div>
 
     <div class="myst-card">
       <div class="myst-card-body">
-        <img src="images/contribute.svg" alt="Contribute" height="70">
-        <p><strong>Community</strong></p>
-        <a href="./contribute/" class="md-button">Get started</a>
+        <img src="assets/images/Community-icon.svg" alt="Community" height="70">
+        <p>
+          <strong>Community</strong>
+          <br>
+          <a href="">Get connected</a>
+        </p>
       </div>
     </div>
   </div>
+</div>
+
+<div style="width: 100%; text-align: center">
+  <a href="./about/" class="md-button">Learn more</a>
 </div>
 
 ---
@@ -70,8 +81,7 @@ hide:
     
     <div class="myst-card">
       <div class="myst-card-body">
-        <img src="images/logo.svg" alt="Chap Logo" height="70" class="dark:hidden">
-        <img src="images/logo-neg.svg" alt="Chap Logo (dark)" height="70" class="hidden dark:block">
+        <img src="assets/images/Chap_icon.svg" alt="Chap Logo" height="70" class="dark:hidden">
         <p><strong>Chap Modeling Platform</strong></p>
         <p>Python-based processing engine for model orchestration, data pipelines, validation, metrics, and hyperparameter tuning. It integrates seamlessly with DHIS2 system for accessing health data and disseminating forecasts, while also functioning as a standalone Python package and command-line tool.</p>
         <a href="./about/" class="md-button">Learn more</a>
@@ -80,8 +90,7 @@ hide:
 
     <div class="myst-card">
       <div class="myst-card-body">
-        <img src="images/logo.svg" alt="Modeling App Logo" height="70" class="dark:hidden">
-        <img src="images/logo-neg.svg" alt="Modeling App Logo (dark)" height="70" class="hidden dark:block">
+        <img src="assets/images/Modeling_icon.svg" alt="Modeling App Logo" height="70" class="dark:hidden">
         <p><strong>DHIS2 Modeling App</strong></p>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
         <a href="https://dhis2.org/climate/climate-data-app/" class="md-button">Learn more</a>
@@ -90,8 +99,7 @@ hide:
 
     <div class="myst-card">
       <div class="myst-card-body">
-        <img src="images/chap-logo.svg" alt="Climate App Logo" height="70" class="dark:hidden">
-        <img src="images/chap-logo-neg.svg" alt="Climate App Logo (dark)" height="70" class="hidden dark:block">
+        <img src="assets/images/climateapp_icon.svg" alt="Climate App Logo" height="70" class="dark:hidden">
         <p><strong>DHIS2 Climate App</strong></p>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
         <a href="https://dhis2-chap.github.io/chap-site/" class="md-button">Learn more</a>
