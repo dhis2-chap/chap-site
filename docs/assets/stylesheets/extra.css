@@ -8,6 +8,11 @@ body {
   display: none;
 }
 
+/* Dont show top page header */
+.md-header__title .md-header__topic {
+  display: none;
+}
+
 /* --- Customize MkDocs Material top nav bar --- */
 .md-main__inner {
   margin-top: 0
@@ -22,6 +27,10 @@ body {
   color: #333333 !important;             /* dark gray text */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* subtle shadow */
 }
+
+/* Move the nav tabs into the header bar */
+
+/* */
 
 /* Logo and title text inside header */
 .md-header__title, 
@@ -58,12 +67,19 @@ body {
   fill: #ccc !important;
 }
 
+/* Main article margins */
+
+article {
+  margin-left: 50px !important;
+  margin-right: 50px !important;
+}
+
 /* Footer styles */
 footer {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 footer.article {
@@ -93,6 +109,8 @@ footer.article a:hover {
 
 .dhis2-footer-right {
   text-align: right;
+  display: flex;
+  flex-direction: column;
 }
 
 /* DHIS2 header styles */
@@ -163,9 +181,9 @@ article > main > div > div:first-child {
   margin-top: 0;
   background-color: rgb(2, 32, 79);
   margin-left: -500px;
-  padding-left: 500px;
+  padding-left: 450px;
   margin-right: -500px;
-  padding-right: 500px;
+  padding-right: 450px;
 }
 
 .dhis2-banner .py-24 {
@@ -203,7 +221,7 @@ article > main > div > div:first-child {
 /* Climate Tools users */
 .dhis2-users {
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 60px;
 }
 
 .dhis2-users .text-center {
@@ -227,6 +245,7 @@ article > main > div > div:first-child {
 
 .dhis2-users img {
   margin-left: 0 !important;
+  width: 20%;
 }
 
 .dhis2-users p {
@@ -340,9 +359,45 @@ article > main > div > div:first-child {
 .dhis2-cards {
   display: flex;
   flex-direction: row;
-  margin: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 5rem;
 }
 
-.myst-card-body img {
+.dhis2-card {
+  background-color: white;
+  border-radius: 5%;
+  outline: 1.5px solid gray;
+  padding: 1.5rem;
+}
+
+.dhis2-card-body img {
   width: 20%;
+}
+
+/* Primary button */
+.dhis2-primary-button {
+  top: auto;
+  bottom: 8px;
+  width: 110px;
+  background-color: #002147;
+  border-radius: 5px;
+  border: none;
+  color: white !important;
+  padding: 4px 10px 6px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.modeling-components {
+  margin-left: -500px;
+  padding-left: 500px;
+  margin-right: -500px;
+  padding-right: 500px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgb(232,236,241);
 }

@@ -5,6 +5,7 @@ theme:
   custom_dir: docs/overrides
   features:
     - navigation.instant
+    - navigation.tabs
     - navigation.tracking
     - content.code.copy
     - content.action.edit
@@ -16,13 +17,13 @@ theme:
     - scheme: slate
       primary: black
       accent: blue
-  logo: assets/logo.png
+  logo: assets/images/dhis2modeling_logo.svg
   favicon: assets/favicon.ico
   font:
     text: Roboto
     code: Roboto Mono
 extra_css:
-  - assets/stylesheets/style.css
+  - assets/stylesheets/extra.css
 
 extra:
   generator: false
@@ -36,7 +37,11 @@ plugins:
 
 nav:
   - 'Home': index.md
-  - 'Guides & Tutorials': index.md
-  - 'Documentation': index.md
-  - 'Community': index.md
-  - 'About': about.md
+  - 'Guides & Tutorials': 
+    - index.md
+  - 'Documentation': 
+    - index.md
+  - 'Community': 
+    - index.md
+  - 'About': 
+    - about.md
