@@ -18,7 +18,7 @@ theme:
       primary: black
       accent: blue
   logo: assets/images/dhis2modeling_logo.svg
-  favicon: assets/favicon.ico
+  favicon: assets/images/Chap_icon.svg
   font:
     text: Roboto
     code: Roboto Mono
@@ -34,9 +34,26 @@ extra_javascript:
 
 plugins:
   - search
+  - mkdocs-video
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.blocks.caption
 
 nav:
-  - 'Home': index.md
+  - Home: index.md
   - 'Guides & Tutorials': 
     - index.md
   - 'Documentation': 
@@ -44,4 +61,7 @@ nav:
   - 'Community': 
     - index.md
   - 'About': 
-    - about.md
+    - about/index.md
+    - about/motivation.md
+    - Partners: about/partners.md
+    - about/roadmap.md

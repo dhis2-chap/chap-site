@@ -4,7 +4,7 @@ body {
 }
 
 /* Remove top page header, only needed for home page so maybe not... */
-.md-content__inner h1 {
+h1:first-of-type {
   display: none;
 }
 

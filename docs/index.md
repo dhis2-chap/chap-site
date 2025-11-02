@@ -1,5 +1,4 @@
 ---
-title: ""
 hide:
   - title
   - navigation
@@ -107,3 +106,13 @@ hide:
 
   </div>
 </div>
+
+<div class="dhis2-justified">
+
+  <h3>Learn more about modeling with Chap and DHIS2</h3>
+
+</div>
+
+![type:video](https://www.youtube.com/embed/aa1EfSuCUQ0?si=CdYA-ZtkooX3lfUC)
+
+<br>
