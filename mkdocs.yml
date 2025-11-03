@@ -9,7 +9,6 @@ theme:
     - navigation.tracking
     - content.code.copy
     - content.action.edit
-    - toc.integrate
   palette:
     - scheme: default
       primary: white
@@ -56,10 +55,13 @@ nav:
   - Home: index.md
   - 'Guides & Tutorials': 
     - index.md
-  - 'Documentation': 
-    - index.md
+  - 'Documentation': https://dhis2-chap.github.io/chap-core/
   - 'Community': 
-    - index.md
+    - community/support.md
+    - community/newsletter.md
+    - Contributing: 
+      - community/contributing/contribute_model.md
+      - community/contributing/contribute_code.md
   - 'About': 
     - about/index.md
     - about/motivation.md

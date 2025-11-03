@@ -1,4 +1,4 @@
-# Promote your climate health modeling research through Chap
+# Share your model
 
 Have you successfully published a scientific paper on climate health modelling and want to broaden the reach of your developed modelling approach? 
 
