@@ -56,8 +56,10 @@ markdown_extensions:
 nav:
   - Home: index.md
   - 'Guides & Tutorials': 
-    - index.md
-  - 'Documentation': https://dhis2-chap.github.io/chap-core/
+    - Overview: guides/index.md
+    - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
+    - Model development: guides/#model-development
+    - Chap CLI Tool: guides/#run-chap-from-commandline
   - 'Community': 
     - community/support.md
     - community/newsletter.md

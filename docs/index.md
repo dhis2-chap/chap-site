@@ -42,7 +42,7 @@ hide:
         <p>
           <strong>Modelers</strong>
           <br>
-          <a href="">Get started</a>
+          <a href="guides/#model-development">Get started</a>
         </p>
       </div>
     </div>
@@ -53,7 +53,7 @@ hide:
         <p>
           <strong>Implementers</strong>
           <br>
-          <a href="">Get started</a>
+          <a href="guides/#implement-chap-for-dhis2">Get started</a>
         </p>
       </div>
     </div>
@@ -84,7 +84,7 @@ hide:
         <img src="assets/images/Chap_icon.svg" alt="Chap Logo" height="70" class="dark:hidden">
         <p><strong>Chap Modeling Platform</strong></p>
         <p>Python-based processing engine for model orchestration, data pipelines, validation, metrics, and hyperparameter tuning. It integrates seamlessly with DHIS2 system for accessing health data and disseminating forecasts, while also functioning as a standalone Python package and command-line tool.</p>
-        <a href="./about/" class="dhis2-primary-button">Learn more</a>
+        <a href="https://github.com/dhis2-chap/chap-core" class="dhis2-primary-button">Get started</a>
       </div>
     </div>
 
@@ -93,7 +93,7 @@ hide:
         <img src="assets/images/Modeling_icon.svg" alt="Modeling App Logo" height="70" class="dark:hidden">
         <p><strong>DHIS2 Modeling App</strong></p>
         <p>Pilot app for DHIS2 that provides seamless integration with the Chap Modeling Platform, providing a user-friendly interface within DHIS2 for selecting data to use to generate predictions in Chap – including data from the DHIS2 Climate App – train predictive models, visualize predictions, and evaluate model accuracy.</p>
-        <a href="https://apps.dhis2.org/app/a29851f9-82a7-4ecd-8b2c-58e0f220bc75" class="dhis2-primary-button">Learn more</a>
+        <a href="https://apps.dhis2.org/app/a29851f9-82a7-4ecd-8b2c-58e0f220bc75" class="dhis2-primary-button">Get started</a>
       </div>
     </div>
 
@@ -102,7 +102,7 @@ hide:
         <img src="assets/images/climateapp_icon.svg" alt="Climate App Logo" height="70" class="dark:hidden">
         <p><strong>DHIS2 Climate App</strong></p>
         <p>DHIS2 app to explore daily and monthly temperature, precipitation and humidity data, and more. The app uses several data sources, including ERA5-Land, which is considered the most accurate and complete climate dataset available with worldwide coverage. Import weather, climate, elevation, and other environmental data into DHIS2 data elements.</p>
-        <a href="https://dhis2.org/climate/climate-data-app/" class="dhis2-primary-button">Learn more</a>
+        <a href="https://apps.dhis2.org/app/effb986c-a3c7-485e-a2f6-5e54ff9df7c3" class="dhis2-primary-button">Get started</a>
       </div>
     </div>
 
