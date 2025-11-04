@@ -1,6 +1,6 @@
 # What is Chap? 
 
-> *Chap is a modeling platform whose goal is to make climate health modeling easier, better, and more impactful.*
+> *Chap is a DHIS2-integrated platform that aims to make climate and health modeling and forecasting easier, better, and more impactful.*
 
 The Chap modeling platform combines health data in national DHIS2 systems with climate, weather, and environmental data from a variety of sources to run and compare predictive models and power early warning systems that are both locally customizable and scalable across disease programs and countries. 
 
