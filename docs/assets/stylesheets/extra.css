@@ -4,8 +4,12 @@ body {
 }
 
 /* Remove top page header, only needed for home page so maybe not... */
-h1:first-of-type {
+/*h1:first-of-type {
   display: none;
+}*/
+h1:first-of-type {
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 /* Dont show top page header */
