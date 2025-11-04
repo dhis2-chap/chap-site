@@ -1,6 +1,6 @@
 # What is Chap? 
 
-Chap was initiated in March 2024 and is coordinated by the HISP network at the University of Oslo, but is organised as a collaborative project where we invite contributions by everyone interested in joint development of data processing, machine learning and software to advance the field of climate and health analytics. 
+Chap was developed as part of a [Wellcome-funded project](https://dhis2.org/wellcome-grant-climate-health/) and contingent on a positive evaluation of the initial phase will run from March 2024 to March 2029. The project is coordinated by the HISP network at the University of Oslo, but is organised as a collaborative project where we invite contributions by everyone interested in joint development of data processing, machine learning and software to advance the field of climate and health analytics. 
 
 Our mission statement: 
 
