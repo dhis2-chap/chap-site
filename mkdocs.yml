@@ -13,9 +13,6 @@ theme:
     - scheme: default
       primary: white
       accent: blue
-    - scheme: slate
-      primary: black
-      accent: blue
   logo: assets/images/dhis2modeling_logo.svg
   favicon: assets/images/Chap_icon.svg
   font:
