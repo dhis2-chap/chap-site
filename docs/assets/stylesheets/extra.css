@@ -181,6 +181,7 @@ article > main > div > div:first-child {
 .dhis2-banner {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 0;
   background-color: rgb(2, 32, 79);
@@ -201,8 +202,12 @@ article > main > div > div:first-child {
   margin-bottom: 30px;
 }
 
-.dhis2-banner-image {
-  
+.dhis2-banner-text {
+  flex: 1 1 50%;
+}
+
+.dhis2-banner-img {
+  flex: 1 1 50%;
 }
 
 /* Centered section below banner on landing page */
@@ -363,12 +368,14 @@ article > main > div > div:first-child {
 .dhis2-cards {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-top: 50px;
   margin-bottom: 50px;
   gap: 5rem;
 }
 
 .dhis2-card {
+  flex: 1 1 25%;
   background-color: white;
   border-radius: 5%;
   outline: 1.5px solid gray;
