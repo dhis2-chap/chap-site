@@ -26,7 +26,7 @@ hide:
 <div class="dhis2-justified">
   <h3 style="text-align:center">A robust open-source platform for climate and health modeling</h3>
   <p>
-    Chap is a Climate & Health Modeling Platform that brings together climate health models into a unified ecosystem, connecting researchers and cutting-edge epidimiological models to policy makers and health practitioners. It makes complex modeling workflows accessible, automates rigorous validation, and integrates directly with DHIS2, the world's leading health information system.
+    Chap is a Climate & Health Modeling Platform that brings together climate health models into a unified ecosystem, connecting researchers and cutting-edge epidimiological models to policy makers and health practitioners. It makes complex modeling workflows accessible, streamlines rigorous model evaluation, and integrates directly with DHIS2, the world's leading health information system.
   </p>
 </div>
 
