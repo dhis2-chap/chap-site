@@ -101,7 +101,7 @@ hide:
       <div class="dhis2-card-body">
         <img src="assets/images/climateapp_icon.svg" alt="Climate App Logo" height="70" class="dark:hidden">
         <p><strong>DHIS2 Climate App</strong></p>
-        <p>DHIS2 app to explore daily and monthly temperature, precipitation and humidity data, and more. The app uses several data sources, including ERA5-Land, which is considered the most accurate and complete climate dataset available with worldwide coverage. Import weather, climate, elevation, and other environmental data into DHIS2 data elements.</p>
+        <p>DHIS2 app to explore and import weather, climate, elevation, and other environmental data into DHIS2 data elements, making it available for use in the Chap Modeling Platform. The app uses several data sources, including ERA5-Land, considered to be the most accurate and complete climate dataset with worldwide coverage.</p>
         <a href="https://apps.dhis2.org/app/effb986c-a3c7-485e-a2f6-5e54ff9df7c3" class="dhis2-primary-button">Get started</a>
       </div>
     </div>
