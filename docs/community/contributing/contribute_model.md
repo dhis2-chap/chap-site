@@ -6,26 +6,9 @@ Or are you an epidemiologist or statistical modeler with basic skills in Python 
 
 If so, the Chap platform is here for you!
 
-## Getting Started
-
-1. Write your model code. You can start with our [minimalist example in R](https://github.com/dhis2-chap/minimalist_example_r/tree/main) or [Python](https://github.com/dhis2-chap/minimalist_example). You model code only needs to:
-
-    * Read a CSV
-    * Output predictions
-
-2. Make your model Chap-compatible. All you need to do is create a file called `MLproject` where you: 
-
-    * Describe your model metadata
-    * Specify the runtime environment
-    * Define the entry points for training and prediction
-
-3. Chap takes care of the rest — validation, tuning, plots, and more.
-
-For the full set of instructions, follow [our detailed technical guide](https://dhis2-chap.github.io/chap-core/external_models/developing_custom_models.html)
-
 ## Benefits
 
-- Your model will be listed in our [publicly available model catalog](../models/models/index.md), with link to your codebase, as well as to your scientific article serving as a description of the model and its capabilities
+- Your model will be listed on our web pages, with a link to your codebase, as well as your scientific article or other documentation serving as a description of the model and its capabilities.
 - Your model will be available to run by anyone having installed Chap, including the many countries that have already set up connections to Chap from their national DHIS2 health information system. Countries can in this way rigorously evaluate the behavior of your model on their own data and may contact you if they have further questions or are considering to use it in operation.
 
 ## Requirements
