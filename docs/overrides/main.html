@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block header %}
+  {% include "thin-header.html" %}  {# your thin top header #}
+  {{ super() }}                {# Material header #}
+{% endblock %}
+
+{% block footer %}
+  {% include "footer.html" %}
+{% endblock %}
