@@ -115,6 +115,6 @@ hide:
 
 </div>
 
-![type:video](https://www.youtube.com/embed/aa1EfSuCUQ0?si=CdYA-ZtkooX3lfUC)
+![type:video](https://www.youtube.com/embed/eNLU8BfMVlA?si=vU24qIp8Vy7IySTh)
 
 <br>
