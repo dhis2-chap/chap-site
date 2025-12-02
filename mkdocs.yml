@@ -1,5 +1,5 @@
 site_name: DHIS2 Modeling
-site_url: https://dhis2-chap.github.io/chap-site
+site_url: https://chap.dhis2.org
 theme:
   name: material
   custom_dir: docs/overrides
