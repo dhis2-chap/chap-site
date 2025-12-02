@@ -30,7 +30,13 @@ extra_javascript:
 
 plugins:
   - search
-  - mkdocs-video
+  - mkdocs-video:
+      css_style:
+          width: "100%"
+          aspect-ratio: "16 / 9"
+          height: "auto"
+          max-height: "60vh"
+          object-fit: "cover"
 
 markdown_extensions:
   - toc:
