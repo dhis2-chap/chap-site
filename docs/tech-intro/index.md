@@ -1,9 +1,8 @@
-# Kigali Webinar Series
+# Working efficiently with model codebases 
+These guides will help you get started with the tools and workflows needed to work efficiently with model development and Chap.
 
-Welcome to the Kigali webinar series documentation. These guides will help you get started with the tools and workflows needed for CHAP model development.
 
 ## Guides
-
 ### [Terminal Basics](terminal.md)
 Learn how to use the command line on Windows (WSL), macOS, and Linux. Essential for running Git commands, installing packages, and using CHAP.
 

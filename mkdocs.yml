@@ -59,11 +59,11 @@ markdown_extensions:
 nav:
   - Home: index.md
   - 'Kigali webinar series':
-    - Overview: kigali-webinar/index.md
-    - Terminal basics: kigali-webinar/terminal.md
-    - Git & GitHub: kigali-webinar/git-github.md
-    - Virtual environments: kigali-webinar/virtual-environments.md
-    - Homework: kigali-webinar/homework.md
+    - Overview: tech-intro/index.md
+    - Terminal basics: tech-intro/terminal.md
+    - Git & GitHub: tech-intro/git-github.md
+    - Virtual environments: tech-intro/virtual-environments.md
+    - Homework: tech-intro/homework.md
   - 'Guides & Tutorials':
     - Overview: guides/index.md
     - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
