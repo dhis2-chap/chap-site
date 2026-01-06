@@ -69,6 +69,7 @@ Git is a **command-line tool** that works with GitHub. While GitHub is the websi
 ### Installation
 
 **macOS:**
+
 <details markdown="1">
 <summary>Show command</summary>
 
@@ -79,6 +80,7 @@ brew install git
 </details>
 
 **Linux (Ubuntu/Debian) / Windows (WSL):**
+
 <details markdown="1">
 <summary>Show command</summary>
 
@@ -105,6 +107,7 @@ To push and pull code without entering passwords, install the GitHub CLI and aut
 **Installation:**
 
 macOS:
+
 <details markdown="1">
 <summary>Show command</summary>
 
@@ -115,6 +118,7 @@ brew install gh
 </details>
 
 Linux (Ubuntu/Debian) / Windows (WSL):
+
 <details markdown="1">
 <summary>Show command</summary>
 
@@ -138,24 +142,29 @@ gh auth login
 ```
 
 When prompted:
+
 1. Select **GitHub.com**
 2. Select **HTTPS**
 3. Select **Yes** to authenticate with GitHub credentials
 4. Select **Login with a web browser** and follow the prompts
 
-
 Once authenticated, Git will use your GitHub credentials automatically.
 
 ### Cloning a Repository
 
-"Cloning" means downloading a repository to your computer:
+"Cloning" means downloading a repository to your computer. You download a repo by running `git clone` followed by the repository link. For example, to clone the Chap Core repo:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/repo-name.git
-cd repo-name
+git clone https://github.com/dhis2-chap/chap-core
 ```
 
-This creates a folder with all the files from the repository.
+This command creates a folder named `chap-core` in your current directory with all the repository files.
+
+To enter the folder:
+
+```bash
+cd chap-core
+```
 
 ### Making Changes
 
@@ -254,6 +263,7 @@ git config --global user.email "your.email@example.com"
 Install GitHub CLI:
 
 macOS:
+
 <details markdown="1">
 <summary>Show command</summary>
 
@@ -264,6 +274,7 @@ brew install gh
 </details>
 
 Linux (Ubuntu/Debian) / Windows (WSL):
+
 <details markdown="1">
 <summary>Show command</summary>
 
@@ -358,10 +369,12 @@ If all verifications passed, you're ready for the next guide: [Virtual Environme
 Want to dive deeper? Here are some helpful resources:
 
 **GitHub:**
+
 - [GitHub's "What is GitHub?" guide](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git) — Official introduction to GitHub and how it works
 - [GitHub Skills](https://skills.github.com/) — Free interactive courses to learn GitHub
 
 **Git:**
+
 - [Git Cheat Sheet (GitHub)](https://education.github.com/git-cheat-sheet-education.pdf) — Quick reference for common Git commands
 - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials) — In-depth explanations of Git concepts and commands
 - [Pro Git Book](https://git-scm.com/book/en/v2) — Free comprehensive book on Git (if you want to understand everything)
