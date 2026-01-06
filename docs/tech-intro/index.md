@@ -3,6 +3,9 @@ These guides will help you get started with the tools and workflows needed to wo
 
 
 ## Guides
+
+Work through the guides in order. Each guide has an Exercise section at the end with verification steps.
+
 ### [Terminal Basics](terminal.md)
 Learn how to use the command line on Windows (WSL), macOS, and Linux. Essential for running Git commands, installing packages, and using CHAP.
 
@@ -13,8 +16,6 @@ Set up Git and GitHub for version control. Learn to fork repositories, clone cod
 Learn how to install packages and optionally learn Docker, uv (Python), and renv (R) to create isolated development environments for CHAP models.
 
 ## Checklist
-
-Work through the guides in order. Each guide has an Exercise section at the end with verification steps.
 
 ### 1. Terminal Basics
 - [ ] Read [Working on the Terminal](terminal.md)
