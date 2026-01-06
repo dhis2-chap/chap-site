@@ -7,8 +7,7 @@
       "sourceDir": "apps/modeling-app/docs/user-guides",
       "targetDir": "docs/guides/using-the-modeling-app",
       "sparseCheckout": true,
-      "tempDir": ".modeling-app-temp",
-      "navSection": "Using the modeling app"
+      "tempDir": ".modeling-app-temp"
     }
   ]
 }
