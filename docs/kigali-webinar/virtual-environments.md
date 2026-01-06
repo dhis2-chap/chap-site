@@ -1,6 +1,6 @@
 # Setting Up Your Development Environment
 
-This guide helps you install the tools needed to run CHAP models: **Docker** and either **uv** (Python) or **renv** (R).
+This guide helps you install the tools needed to run CHAP models: **uv** (Python) or **renv** (R), and optionally **Docker**.
 
 ---
 
@@ -16,68 +16,52 @@ Virtual environments solve this by giving each project its own set of packages.
 
 | Tool       | What it isolates                    | When to use                                   |
 | ---------- | ----------------------------------- | --------------------------------------------- |
-| **uv**     | Python packages                     | Python projects, local development            |
+| **venv**   | Python packages                     | Learning, simple Python projects              |
+| **uv**     | Python packages                     | Python projects (faster, recommended)         |
 | **renv**   | R packages                          | R projects, local development                 |
 | **Docker** | Everything (OS, language, packages) | Sharing code, deployment, cross-platform work |
 
-**uv** and **renv** isolate _packages_ — your project gets its own folder of dependencies.
+**uv** and **renv** isolate _packages_ — your project gets its own folder of dependencies. You need **one of** these depending on whether you use Python or R.
 
-**Docker** goes further — it isolates the _entire environment_ including the operating system. If code runs in a Docker container on your machine, it runs identically on any other machine. CHAP uses Docker to ensure models work the same everywhere.
-
-You need **Docker** plus **one of** uv or renv (depending on whether you use Python or R).
+**Docker** goes further — it isolates the _entire environment_ including the operating system. If code runs in a Docker container on your machine, it runs identically on any other machine. CHAP uses Docker to ensure models work the same everywhere. Docker is optional for local development but required if you want to run or share containerized models.
 
 ---
 
-## 1. Install Docker
+## 1. Python Virtual Environments (venv)
 
-**Official guide:** [docs.docker.com/get-docker](https://docs.docker.com/get-docker/)
+Python includes a built-in module called `venv` for creating virtual environments. Understanding how `venv` works helps you appreciate what tools like `uv` automate.
 
-<details markdown="1">
-<summary><strong>macOS</strong></summary>
-
-```bash
-brew install --cask docker
-```
-
-Then open Docker from Applications.
-
-Or download [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop/) directly.
-
-</details>
-
-<details markdown="1">
-<summary><strong>Windows</strong></summary>
-
-Download [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/), run the installer, and restart if prompted.
-
-</details>
-
-<details markdown="1">
-<summary><strong>Linux (Ubuntu/Debian)</strong></summary>
+### Create a virtual environment
 
 ```bash
-sudo apt-get update
-sudo apt-get install docker.io
-sudo systemctl start docker
-sudo systemctl enable docker
-sudo usermod -aG docker $USER
+python -m venv .venv
 ```
 
-Then log out and log back in.
+This creates a `.venv` folder containing a copy of the Python interpreter and a place for installed packages.
 
-</details>
-
-### Verify
+### Activate the environment
 
 ```bash
-docker --version
+source .venv/bin/activate
 ```
 
-You should see something like `Docker version 29.0.0`.
+When activated, your terminal prompt changes (usually showing `(.venv)`) and `python` points to the virtual environment's interpreter.
+
+### Deactivate the environment
+
+```bash
+deactivate
+```
+
+This returns you to your system Python.
+
+**Further reading:** [Python venv documentation](https://docs.python.org/3/library/venv.html)
 
 ---
 
 ## 2. Install uv (Python users)
+
+**uv** is a fast, modern replacement for `venv` + `pip`. It creates virtual environments and manages packages automatically — no need to activate/deactivate manually. We recommend uv for CHAP projects.
 
 **Official guide:** [docs.astral.sh/uv/getting-started/installation](https://docs.astral.sh/uv/getting-started/installation/)
 
@@ -149,7 +133,67 @@ You should see a version number.
 
 ---
 
+## 4. Install Docker (Optional)
+
+Install Docker if you plan to run CHAP models in containers or share reproducible environments.
+
+**Official guide:** [docs.docker.com/get-docker](https://docs.docker.com/get-docker/)
+
+<details markdown="1">
+<summary><strong>macOS</strong></summary>
+
+```bash
+brew install --cask docker
+```
+
+Then open Docker from Applications.
+
+Or download [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop/) directly.
+
+</details>
+
+<details markdown="1">
+<summary><strong>Windows</strong></summary>
+
+Download [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/), run the installer, and restart if prompted.
+
+</details>
+
+<details markdown="1">
+<summary><strong>Linux (Ubuntu/Debian)</strong></summary>
+
+```bash
+sudo apt-get update
+sudo apt-get install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+```
+
+Then log out and log back in.
+
+</details>
+
+### Verify
+
+```bash
+docker --version
+```
+
+You should see something like `Docker version 29.0.0`.
+
+---
+
 ## Quick Reference
+
+### venv (Python)
+
+| Task                   | Command                      |
+| ---------------------- | ---------------------------- |
+| Create environment     | `python -m venv .venv`       |
+| Activate               | `source .venv/bin/activate`  |
+| Install a package      | `pip install <package>`      |
+| Deactivate             | `deactivate`                 |
 
 ### uv (Python)
 
@@ -179,47 +223,84 @@ You should see a version number.
 
 ## Exercise
 
-### 1. Test Docker
+Choose either **Python** or **R** based on your preference.
+
+### Python
+
+#### 1. Try Python virtual environments (venv)
+
+Create a virtual environment, install a package, and verify it works:
 
 ```bash
-docker run hello-world
+# Create a new directory and enter it
+mkdir venv-test
+cd venv-test
+
+# Create a virtual environment
+python -m venv .venv
+
+# Activate it
+source .venv/bin/activate
+
+# Check which Python you're using (should point to .venv)
+which python
+
+# Install a package
+pip install numpy
+
+# Verify the package works
+python -c "import numpy; print(numpy.__version__)"
+
+# Deactivate when done
+deactivate
 ```
 
-You should see "Hello from Docker!" and a message explaining what happened.
-
-### 2. Test uv (Python) or renv (R)
-
-<details markdown="1">
-<summary><strong>Python</strong></summary>
+#### 2. Test uv
 
 ```bash
-git clone https://github.com/dhis2-chap/chap-workshop-python.git
-cd chap-workshop-python
-uv sync
-uv run python --version
+# Create a new directory and enter it
+mkdir uv-test
+cd uv-test
+
+# Initialize a new uv project
+uv init
+
+# Add a package
+uv add numpy
+
+# Verify the package works
+uv run python -c "import numpy; print(numpy.__version__)"
 ```
 
-You should see packages installing, then a Python version number.
+### R
 
-</details>
+#### Test renv
 
-<details markdown="1">
-<summary><strong>R</strong></summary>
+Create a new directory and initialize an renv project:
 
 ```bash
-git clone https://github.com/dhis2-chap/chap-workshop-r.git
-cd chap-workshop-r
+# Create a new directory and enter it
+mkdir renv-test
+cd renv-test
 ```
 
 Then in R:
 
 ```r
-renv::restore()
-renv::status()
+# Initialize renv in this project
+renv::init()
+
+# Install a package
+install.packages("jsonlite")
+
+# Save the installed packages to the lockfile
+renv::snapshot()
+
+# Verify the package works
+library(jsonlite)
+packageVersion("jsonlite")
 ```
 
-You should see packages installing, then "No issues found."
-
-</details>
+---
 
 If these commands complete without errors, your environment is ready.
