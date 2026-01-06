@@ -69,6 +69,8 @@ nav:
     - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
     - Model development: guides/#model-development
     - Chap CLI Tool: guides/#run-chap-from-commandline
+    - Using the modeling app:
+      - Getting started: guides/using-the-modeling-app/getting-started.md
   - 'Community': 
     - community/support.md
     - community/newsletter.md
