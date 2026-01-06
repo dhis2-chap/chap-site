@@ -58,7 +58,13 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - 'Guides & Tutorials': 
+  - 'Kigali webinar series':
+    - Overview: kigali-webinar/index.md
+    - Terminal basics: kigali-webinar/terminal.md
+    - Git & GitHub: kigali-webinar/git-github.md
+    - Virtual environments: kigali-webinar/virtual-environments.md
+    - Homework: kigali-webinar/homework.md
+  - 'Guides & Tutorials':
     - Overview: guides/index.md
     - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
     - Model development: guides/#model-development
