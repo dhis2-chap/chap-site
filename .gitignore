@@ -2,3 +2,13 @@
 # actually, if we ignore files then they wont be copied during deployment process
 #docs/models/models/*.md
 #docs/about/team.md
+
+# MkDocs build output
+site/
+
+# Fetched external documentation (synced at build time)
+docs/guides/using-the-modeling-app/
+
+# Temp directories for external doc fetching
+.modeling-app-temp/
+.*-repo-temp/
