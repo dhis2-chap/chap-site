@@ -58,12 +58,11 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - 'Kigali webinar series':
-    - Overview: tech-intro/index.md
+  - '2026 Modeling webinar series':
+    - Homework before Jan 14: tech-intro/index.md
     - Terminal basics: tech-intro/terminal.md
     - Git & GitHub: tech-intro/git-github.md
     - Virtual environments: tech-intro/virtual-environments.md
-    - Homework: tech-intro/homework.md
   - 'Guides & Tutorials':
     - Overview: guides/index.md
     - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
