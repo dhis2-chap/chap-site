@@ -42,7 +42,7 @@ hide:
         <p>
           <strong>Modelers</strong>
           <br>
-          <a href="guides/#model-development">Get started</a>
+          <a href="https://dhis2-chap.github.io/chap-core/external_models/index.html">Get started</a>
         </p>
       </div>
     </div>
