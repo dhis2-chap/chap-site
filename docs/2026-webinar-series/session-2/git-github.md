@@ -79,7 +79,7 @@ brew install git
 
 </details>
 
-**Linux (Ubuntu/Debian) / Windows (WSL):**
+**Linux (Ubuntu/Debian) / WSL:**
 
 <details markdown="1">
 <summary>Show command</summary>
@@ -117,7 +117,7 @@ brew install gh
 
 </details>
 
-Linux (Ubuntu/Debian) / Windows (WSL):
+Linux (Ubuntu/Debian) / WSL:
 
 <details markdown="1">
 <summary>Show command</summary>
@@ -273,7 +273,7 @@ brew install gh
 
 </details>
 
-Linux (Ubuntu/Debian) / Windows (WSL):
+Linux (Ubuntu/Debian) / WSL:
 
 <details markdown="1">
 <summary>Show command</summary>
