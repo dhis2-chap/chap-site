@@ -61,9 +61,9 @@ nav:
   - "Modeling Webinar Series":
       - Session 1: session-1/session-1.md
       - Session 2: tech-intro/index.md
-          tech-intro/terminal.md
-          tech-intro/git-github.md
-          tech-intro/virtual-environments.md
+          - tech-intro/terminal.md
+          - tech-intro/git-github.md
+          - tech-intro/virtual-environments.md
   - "Guides & Tutorials":
       - Overview: guides/index.md
       - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
