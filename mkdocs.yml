@@ -59,6 +59,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - "Modeling Webinar Series":
+      #- "Overview": webinar-series/index.md
       - "Session 1": session-1/session-1.md
       - "Session 2":
           - tech-intro/index.md
