@@ -1,27 +1,29 @@
 # Homework before 14. Jan 2026
 
-[Community of Practice for webinar series, session 2](https://community.dhis2.org/t/working-efficiently-with-codebases-webinar-series-2-thread/69414)
+# Recording and guides
+
+**Link:** [Community of Practice for webinar series, session 2](https://community.dhis2.org/t/working-efficiently-with-codebases-webinar-series-2-thread/69414)
 
 <details markdown="1">
-  <summary><strong style="font-size: 18px">Recording of session 2</strong></summary>
+  <summary><strong style="font-size: 18px">Webinar series: recording of session 2</strong></summary>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/59IjIK3lNvQ?si=CScIMXmtyFKg4Glh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </details>
 
 <details markdown="1">
-  <summary><strong style="font-size: 18px">Guides</strong></summary>
+  <summary><strong style="font-size: 18px">Guides from session 2</strong></summary>
 
 These guides will help you get started with the tools and workflows needed to work efficiently with model development and Chap. Work through the guides in order. Each guide has an Exercise section at the end with verification steps.
 
-### [Terminal Basics](terminal.md)
+## [Terminal Basics](terminal.md)
 
 Learn how to use the command line on Windows (WSL), macOS, and Linux. Essential for running Git commands, installing packages, and using CHAP.
 
-### [Git and GitHub](git-github.md)
+## [Git and GitHub](git-github.md)
 
 Set up Git and GitHub for version control. Learn to fork repositories, clone code, make changes, and push updates.
 
-### [Installation and Virtual Environments](virtual-environments.md)
+## [Installation and Virtual Environments](virtual-environments.md)
 
 Learn how to install packages and optionally learn Docker, uv (Python), and renv (R) to create isolated development environments for CHAP models.
 
