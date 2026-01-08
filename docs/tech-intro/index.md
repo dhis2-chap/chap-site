@@ -24,7 +24,9 @@ Set up Git and GitHub for version control. Learn to fork repositories, clone cod
 
 ## [Installation and Virtual Environments](virtual-environments.md)
 
-Learn how to install packages and optionally learn Docker, uv (Python), and renv (R) to create isolated development environments for CHAP models. </details>
+Learn how to install packages and optionally learn Docker, uv (Python), and renv (R) to create isolated development environments for CHAP models.
+
+</details>
 
 ## Homework
 
