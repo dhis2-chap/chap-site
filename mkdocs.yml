@@ -60,9 +60,9 @@ nav:
   - Home: index.md
   - "Modeling webinar series":
       - Session 2, homework before 14. Jan: tech-intro/index.md
-      - Terminal basics: tech-intro/terminal.md
-      - Git & GitHub: tech-intro/git-github.md
-      - Virtual environments: tech-intro/virtual-environments.md
+      - 1. Terminal basics: tech-intro/terminal.md
+      - 2. Git & GitHub: tech-intro/git-github.md
+      - 3. Virtual environments: tech-intro/virtual-environments.md
   - "Guides & Tutorials":
       - Overview: guides/index.md
       - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
