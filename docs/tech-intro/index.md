@@ -1,17 +1,17 @@
 # Homework before 14. Jan 2026
 
-# Recording and guides
+## Recording and guides
 
 **Link:** [Community of Practice for webinar series, session 2](https://community.dhis2.org/t/working-efficiently-with-codebases-webinar-series-2-thread/69414)
 
 <details markdown="1">
-  <summary><strong style="font-size: 18px">Webinar series: recording of session 2</strong></summary>
+  <summary><strong style="font-size: 16px">Webinar series: recording of session 2</strong></summary>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/59IjIK3lNvQ?si=CScIMXmtyFKg4Glh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </details>
 
 <details markdown="1">
-  <summary><strong style="font-size: 18px">Guides from session 2</strong></summary>
+  <summary><strong style="font-size: 16px">Guides from session 2</strong></summary>
 
 These guides will help you get started with the tools and workflows needed to work efficiently with model development and Chap. Work through the guides in order. Each guide has an Exercise section at the end with verification steps.
 
