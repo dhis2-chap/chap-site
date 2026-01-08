@@ -58,8 +58,8 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - "Session 2: Modeling webinar series":
-      - Homework before 14. Jan: tech-intro/index.md
+  - "Modeling webinar series":
+      - Session 2, homework before 14. Jan: tech-intro/index.md
       - Terminal basics: tech-intro/terminal.md
       - Git & GitHub: tech-intro/git-github.md
       - Virtual environments: tech-intro/virtual-environments.md
