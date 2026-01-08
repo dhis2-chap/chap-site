@@ -1,4 +1,4 @@
-# Session 2: Homework before 14. Jan 2026
+# Homework before 14. Jan 2026
 
 ## Recording and guides
 

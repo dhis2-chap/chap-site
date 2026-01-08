@@ -60,13 +60,13 @@ markdown_extensions:
 nav:
   - Home: index.md
   - "Modeling Webinar Series":
-      #- "Overview": webinar-series/index.md
-      - "Session 1": session-1/session-1.md
+      - "Overview": 2026-webinar-series/index.md
+      - "Session 1": 2026-webinar-series/session-1/index.md
       - "Session 2":
-          - tech-intro/index.md
-          - tech-intro/terminal.md
-          - tech-intro/git-github.md
-          - tech-intro/virtual-environments.md
+          - 2026-webinar-series/session-2/index.md
+          - 2026-webinar-series/session-2/terminal.md
+          - 2026-webinar-series/session-2/git-github.md
+          - 2026-webinar-series/session-2/virtual-environments.md
   - "Guides & Tutorials":
       - Overview: guides/index.md
       - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
