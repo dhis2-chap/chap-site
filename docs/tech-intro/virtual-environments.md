@@ -84,15 +84,6 @@ source $HOME/.local/bin/env
 
 </details>
 
-<details markdown="1">
-<summary><strong>Windows (PowerShell)</strong></summary>
-
-```powershell
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
-
-</details>
-
 ### Verify
 
 ```bash
