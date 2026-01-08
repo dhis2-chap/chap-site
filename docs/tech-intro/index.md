@@ -10,10 +10,7 @@
 
 </details>
 
-<details markdown="1">
-  <summary><strong>Guides from session 2</strong></summary>
-
-  <div style="font-size: 1rem">
+<details markdown="1"> <summary><strong style="font-size: 16px">Guides from session 2</strong></summary>
 
 These guides will help you get started with the tools and workflows needed to work efficiently with model development and Chap. Work through the guides in order. Each guide has an Exercise section at the end with verification steps.
 
@@ -27,10 +24,7 @@ Set up Git and GitHub for version control. Learn to fork repositories, clone cod
 
 ## [Installation and Virtual Environments](virtual-environments.md)
 
-Learn how to install packages and optionally learn Docker, uv (Python), and renv (R) to create isolated development environments for CHAP models.
-
-  </div>
-</details>
+Learn how to install packages and optionally learn Docker, uv (Python), and renv (R) to create isolated development environments for CHAP models. </details>
 
 ## Homework
 
