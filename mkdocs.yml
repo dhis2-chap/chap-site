@@ -67,6 +67,7 @@ nav:
           - 2026-webinar-series/session-2/terminal.md
           - 2026-webinar-series/session-2/git-github.md
           - 2026-webinar-series/session-2/virtual-environments.md
+          - 2026-webinar-series/session-2/homework.md
   - "Guides & Tutorials":
       - Overview: guides/index.md
       - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
