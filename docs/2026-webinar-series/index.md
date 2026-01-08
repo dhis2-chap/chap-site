@@ -1,27 +1,24 @@
 # Webinar Series on spatiotemporal modelling with Chap 2026
 
-This webinar series is obligatory preparation for participants attending the DHIS2 workshop on spatiotemporal modelling of climate-sensitive disease in Kigali late February 2026. The webinar series itself is also open to anyone interested, with all resources being openly accessible, and where we will also provide support and follow-up through our Community-of-practice.
+<p style="font-size: 12px">
+This webinar series is mandatory preparation for participants of the DHIS2 spatiotemporal modelling workshop in Kigali in late February 2026, and is also open to anyone interested, with openly accessible resources and ongoing support through our Community of Practice.
+<p>
 
-<div class="modeling-components dhis2-justified">
-  <div class="dhis2-cards">
-    
-    <div class="dhis2-card">
-      <div class="dhis2-card-body">
-        <p><strong>Session 1</strong></p>
-        <p>Introduction to spatiotemporal modeling</p>
-        <a href="/session-1/session-1" class="dhis2-primary-button">Session 1</a>
-      </div>
-    </div>
-
-    <div class="dhis2-card">
-      <div class="dhis2-card-body">
-        <p><strong>Session 2</strong></p>
-        <p>Working with codebases</p>
-        <a href="https://apps.dhis2.org/app/effb986c-a3c7-485e-a2f6-5e54ff9df7c3" class="dhis2-primary-button">Session 2</a>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-## [January 7: Intro to basic technology for working with codebases](../tech-intro/index.md)
+<main class="webinar-wrap">
+  <section class="webinar-row">
+    <article class="webinar-card">
+      <h2 class="webinar-card-title">Session 1</h2>
+      <p class="webinar-card-subtitle">
+        Introduction to spatiotemporal modeling
+      </p>
+      <a class="webinar-card-button" href="#session-1">Session 1</a>
+    </article>
+    <article class="webinar-card">
+      <h2 class="webinar-card-title">Session 2</h2>
+      <p class="webinar-card-subtitle">
+        Working with codebases
+      </p>
+      <a class="webinar-card-button" href="#session-2">Session 2</a>
+    </article>
+  </section>
+</main>
