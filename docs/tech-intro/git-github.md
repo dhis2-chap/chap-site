@@ -1,4 +1,4 @@
-# Git and GitHub
+# 2. Git and GitHub
 
 ## Why?
 

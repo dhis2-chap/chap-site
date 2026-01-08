@@ -1,4 +1,4 @@
-# Working on the Terminal
+# 1. Working on the Terminal
 
 ## Why terminal?
 

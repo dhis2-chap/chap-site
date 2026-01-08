@@ -1,4 +1,4 @@
-# Setting Up Your Development Environment
+# 3. Setting Up Your Development Environment
 
 This guide helps you install the tools needed to run CHAP models: **uv** (Python) or **renv** (R), and optionally **Docker**.
 
@@ -188,12 +188,12 @@ You should see something like `Docker version 29.0.0`.
 
 ### venv (Python)
 
-| Task                   | Command                      |
-| ---------------------- | ---------------------------- |
-| Create environment     | `python -m venv .venv`       |
-| Activate               | `source .venv/bin/activate`  |
-| Install a package      | `pip install <package>`      |
-| Deactivate             | `deactivate`                 |
+| Task               | Command                     |
+| ------------------ | --------------------------- |
+| Create environment | `python -m venv .venv`      |
+| Activate           | `source .venv/bin/activate` |
+| Install a package  | `pip install <package>`     |
+| Deactivate         | `deactivate`                |
 
 ### uv (Python)
 
