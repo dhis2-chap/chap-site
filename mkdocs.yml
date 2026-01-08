@@ -32,11 +32,11 @@ plugins:
   - search
   - mkdocs-video:
       css_style:
-          width: "100%"
-          aspect-ratio: "16 / 9"
-          height: "auto"
-          max-height: "60vh"
-          object-fit: "cover"
+        width: "100%"
+        aspect-ratio: "16 / 9"
+        height: "auto"
+        max-height: "60vh"
+        object-fit: "cover"
 
 markdown_extensions:
   - toc:
@@ -58,24 +58,24 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - '2026 Modeling webinar series':
-    - Homework before Jan 14: tech-intro/index.md
-    - Terminal basics: tech-intro/terminal.md
-    - Git & GitHub: tech-intro/git-github.md
-    - Virtual environments: tech-intro/virtual-environments.md
-  - 'Guides & Tutorials':
-    - Overview: guides/index.md
-    - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
-    - Model development: guides/#model-development
-    - Chap CLI Tool: guides/#run-chap-from-commandline
-  - 'Community': 
-    - community/support.md
-    - community/newsletter.md
-    - Contributing: 
-      - community/contributing/contribute_model.md
-      - community/contributing/contribute_code.md
-  - 'About': 
-    - about/index.md
-    - about/motivation.md
-    - Partners: about/partners.md
-    - about/roadmap.md
+  - "Session 2: Modeling webinar series":
+      - Homework before 14. Jan: tech-intro/index.md
+      - Terminal basics: tech-intro/terminal.md
+      - Git & GitHub: tech-intro/git-github.md
+      - Virtual environments: tech-intro/virtual-environments.md
+  - "Guides & Tutorials":
+      - Overview: guides/index.md
+      - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
+      - Model development: guides/#model-development
+      - Chap CLI Tool: guides/#run-chap-from-commandline
+  - "Community":
+      - community/support.md
+      - community/newsletter.md
+      - Contributing:
+          - community/contributing/contribute_model.md
+          - community/contributing/contribute_code.md
+  - "About":
+      - about/index.md
+      - about/motivation.md
+      - Partners: about/partners.md
+      - about/roadmap.md
