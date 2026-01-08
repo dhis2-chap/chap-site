@@ -59,10 +59,11 @@ markdown_extensions:
 nav:
   - Home: index.md
   - "Modeling Webinar Series":
-      - Session 2, homework before 14. Jan: tech-intro/index.md
-      - 1. Terminal basics: tech-intro/terminal.md
-      - 2. Git & GitHub: tech-intro/git-github.md
-      - 3. Virtual environments: tech-intro/virtual-environments.md
+      - Session 1: session-1/session-1.md
+      - Session 2: tech-intro/index.md
+          tech-intro/terminal.md
+          tech-intro/git-github.md
+          tech-intro/virtual-environments.md
   - "Guides & Tutorials":
       - Overview: guides/index.md
       - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
