@@ -2,13 +2,13 @@
 
 <div style="font-size: 22px">Session 2</div>
 
+[Community of Practice for webinar series, session 2🔗](https://community.dhis2.org/t/working-efficiently-with-codebases-webinar-series-2-thread/69414)
+
 ## Homework
 
-[Homework](homework) 🔗 is due January 14, 2026
+[Homework](homework)🔗 is due January 14, 2026
 
 ## Recording and guides
-
-**Link:** [Community of Practice for webinar series, session 2](https://community.dhis2.org/t/working-efficiently-with-codebases-webinar-series-2-thread/69414)
 
 <details markdown="1">
   <summary><strong style="font-size: 16px">Recording of session 2</strong></summary>
