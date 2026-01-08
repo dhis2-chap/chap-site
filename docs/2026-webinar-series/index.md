@@ -7,17 +7,17 @@ This webinar series is obligatory preparation for participants attending the DHI
     
     <div class="dhis2-card">
       <div class="dhis2-card-body">
-        <p><strong>Session 1: Introduction to spatiotemporal modeling</strong></p>
-        <pThis session introduces the core concepts of spatiotemporal modeling and introduces the webinar and workshop schedule.</p>
-        <a href="/session-1/session-1" class="dhis2-primary-button">Session 2</a>
+        <p><strong>Session 1</strong></p>
+        <p>Introduction to spatiotemporal modeling</p>
+        <a href="/session-1/session-1" class="dhis2-primary-button">Session 1</a>
       </div>
     </div>
 
     <div class="dhis2-card">
       <div class="dhis2-card-body">
-        <p><strong>Session 2: Working with codebases</strong></p>
-        <p>Learning guides, exercises and verification that you have in place (by Jan 14) what you need for working efficiently with model codebases through this full webinar series and the workshop in Kigali.</p>
-        <a href="https://apps.dhis2.org/app/effb986c-a3c7-485e-a2f6-5e54ff9df7c3" class="dhis2-primary-button">Session 1</a>
+        <p><strong>Session 2</strong></p>
+        <p>Working with codebases</p>
+        <a href="https://apps.dhis2.org/app/effb986c-a3c7-485e-a2f6-5e54ff9df7c3" class="dhis2-primary-button">Session 2</a>
       </div>
     </div>
 
