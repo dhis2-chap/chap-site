@@ -38,11 +38,11 @@ Here are some modifications you can try:
 ```python
 # Original
 from sklearn.linear_model import LinearRegression
-model = LinearRegression()
+reg = LinearRegression()
 
 # Try Ridge regression instead
 from sklearn.linear_model import Ridge
-model = Ridge(alpha=1.0)
+reg = Ridge(alpha=1.0)
 ```
 
 **R (main.R):** Try a different model formula or method.
