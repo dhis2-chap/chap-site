@@ -12,15 +12,11 @@ CHAP (Climate and Health Assessment Platform) is a tool for developing and evalu
 
 You should have `uv` installed from [Session 2](../session-2/virtual-environments.md). If not, install it first:
 
-**Linux/macOS:**
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-**Windows (PowerShell):**
-```powershell
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
+**Windows users:** Use WSL (Windows Subsystem for Linux) as covered in [Session 2](../session-2/terminal.md).
 
 ## Installing CHAP
 
