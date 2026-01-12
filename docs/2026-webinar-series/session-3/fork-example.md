@@ -1,5 +1,7 @@
 # 2. Fork a Minimalist Example
 
+To get started with building your first CHAP-compatible model, you'll fork and clone a minimalist example repository. You can choose between Python or R based on your preferred programming language.
+
 ## Choose Your Language
 
 We provide two minimalist example repositories demonstrating CHAP-compatible models:
