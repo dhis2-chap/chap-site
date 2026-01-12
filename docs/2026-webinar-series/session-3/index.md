@@ -1,5 +1,8 @@
 # Building your first model
 
+This session is focused on getting you set up with CHAP and make your first model that runs through chap. You will do this by fork an existing minimalist example model repository, make some simple modifications to the model code, and run it through chap.
+
+
 <div style="font-size: 22px">Session 3</div>
 
 [Community of Practice for webinar series, session 3](https://community.dhis2.org/c/development/chap/84)
