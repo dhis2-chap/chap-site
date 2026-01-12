@@ -73,6 +73,7 @@ nav:
           - 2026-webinar-series/session-3/install-chap.md
           - 2026-webinar-series/session-3/fork-example.md
           - 2026-webinar-series/session-3/modify-model.md
+          - 2026-webinar-series/session-3/run-model.md
           - 2026-webinar-series/session-3/homework.md
   - "Guides & Tutorials":
       - Overview: guides/index.md

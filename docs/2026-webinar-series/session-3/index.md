@@ -33,4 +33,8 @@ Fork and clone an example model repository. Choose between Python (uv) or R (ren
 
 Learn the structure of a CHAP-compatible model and make simple modifications to the example code.
 
+## [4. Run Your Model Through CHAP](run-model.md)
+
+Learn how the MLproject file works and run evaluations using the CHAP command-line tool.
+
 </details>
