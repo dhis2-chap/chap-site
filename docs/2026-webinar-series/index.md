@@ -18,5 +18,11 @@
         Working with codebases
       </p>
         </div>
+        <div class="webinar-card" onclick="location.href='session-3'">
+      <div class="webinar-card-title">Session 3 🔗</div>
+      <p class="webinar-card-subtitle">
+        Building your first model
+      </p>
+        </div>
   </div>
 </div>
