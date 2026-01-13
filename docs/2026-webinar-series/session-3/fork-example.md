@@ -4,7 +4,7 @@ To get started with building your first CHAP-compatible model, you'll fork and c
 
 ## Choose Your Language
 
-We provide two minimalist example repositories demonstrating CHAP-compatible models:
+We provide two minimalist example repositories demonstrating CHAP-compatible models. You should choose one based on your preferred programming language (either R or Python):
 
 | Language | Repository | Environment Manager |
 |----------|-----------|---------------------|
@@ -62,6 +62,7 @@ After following the README, and making changes to the code, you should commit an
 5. Make sure you commit and push any changes you make to your fork on Github.
 
 **Verification:**
+
 - You have a forked repository under your GitHub account
 - You can see the README.md file in the repository
 - You have been able to run the model in isolated mode
