@@ -49,6 +49,8 @@ After cloning your fork, open the **README.md** in the repository or on Github. 
 - Making model alterations
 - Running the model through CHAP
 
+After following the README, and making changes to the code, you should commit and push changes to your fork on Github.
+
 ## Exercise
 
 ### Fork and clone the example
@@ -57,7 +59,12 @@ After cloning your fork, open the **README.md** in the repository or on Github. 
 2. Clone your fork to your local machine
 3. Navigate to the repository directory
 4. Follow the README in the repository. It guides you through running the model in isolated mode, how to make changes, and how to run the model through chap.
+5. Make sure you commit and push any changes you make to your fork on Github.
 
 **Verification:**
 - You have a forked repository under your GitHub account
 - You can see the README.md file in the repository
+- You have been able to run the model in isolated mode
+- You have been able to run your model through chap (using the chap evaluate command) and you have gotten a report.pdf with some results.
+- You have been able to make changes, and you have pushed the changes to your fork on Github
+

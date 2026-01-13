@@ -28,12 +28,6 @@ uv tool install chap-core
 
 This installs the `chap` command-line tool globally, making it available from any directory.
 
-To install a specific version (e.g., v1.0.1):
-
-```bash
-uv tool install chap-core==1.0.1
-```
-
 ## Exercise
 
 ### Verify your installation
@@ -46,4 +40,4 @@ chap --help
 
 You should see output listing available commands including `evaluate2`, `plot-backtest`, and `export-metrics`.
 
-**Verification:** If you see the help output with available commands, CHAP is installed correctly. You're ready for the next guide: [Fork a Minimalist Example](fork-example.md).
+**Verification:** If you see the help output with available commands, CHAP is installed correctly. You're ready for the next guide: [Implement your own model from a minimalist example](fork-example.md).
