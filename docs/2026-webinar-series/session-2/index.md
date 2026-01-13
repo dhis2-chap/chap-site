@@ -1,24 +1,11 @@
-# Working with codebases
+# Session 2 - Learn modern tools and practices to work effectively with codebases
+These guides will help you get started with the tools and workflows needed to work efficiently with model development and Chap. Work through the guides in order. Each guide has an Exercise section at the end with verification steps.
 
-<div style="font-size: 22px">Session 2</div>
-
-[Community of Practice for webinar series, session 2🔗](https://community.dhis2.org/t/working-efficiently-with-codebases-webinar-series-2-thread/69414)
-
-## Homework
-
-[Homework](homework)🔗 is due January 14, 2026
-
-## Recording and guides
-
-<details markdown="1">
+## Recording
   <summary><strong style="font-size: 16px">Recording of session 2</strong></summary>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/59IjIK3lNvQ?si=CScIMXmtyFKg4Glh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 </details>
 
-<details markdown="1"> <summary><strong style="font-size: 16px">Guides from session 2</strong></summary>
-
-These guides will help you get started with the tools and workflows needed to work efficiently with model development and Chap. Work through the guides in order. Each guide has an Exercise section at the end with verification steps.
+## Guides
 
 ## [1. Terminal Basics🔗](terminal.md)
 
@@ -33,3 +20,10 @@ Set up Git and GitHub for version control. Learn to fork repositories, clone cod
 Learn how to install packages and optionally learn Docker, uv (Python), and renv (R) to create isolated development environments for CHAP models.
 
 </details>
+
+## Homework
+To follow the progression of the webinar series, you should **[verify that you are all set]((homework))** by January 14, 2026
+
+## Get help
+[Community of Practice for webinar series, session 2🔗](https://community.dhis2.org/t/working-efficiently-with-codebases-webinar-series-2-thread/69414)
+

@@ -1,5 +1,5 @@
 # 2. Git and GitHub
-
+By the end of this guide, you will have your own account at GitHub, where you can conveniently access and share code with the community.   
 ## Why?
 
 When working with code, you need to:

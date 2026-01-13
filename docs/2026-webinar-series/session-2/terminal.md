@@ -1,5 +1,5 @@
 # 1. Working on the Terminal
-
+By the end of this guide, you will know how to use the terminal to navigate your file system and run commands. 
 ## Why terminal?
 
 The terminal is essential for:

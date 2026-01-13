@@ -1,6 +1,5 @@
 # 3. Setting Up Your Development Environment
-
-This guide helps you install the tools needed to run CHAP models: **uv** (Python) or **renv** (R), and optionally **Docker**.
+By the end of this guide, you will know how to use tools like **uv** (Python) or **renv** (R) to more easily get code up and running on your machine.
 
 ---
 
@@ -12,7 +11,7 @@ Virtual environments solve this by giving each project its own set of packages.
 
 ---
 
-## Why These Tools?
+## Why Virtual environments?
 
 | Tool       | What it isolates                    | When to use                                   |
 | ---------- | ----------------------------------- | --------------------------------------------- |

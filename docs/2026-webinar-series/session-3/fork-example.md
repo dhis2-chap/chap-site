@@ -1,17 +1,22 @@
 # 2. Implement your own model from a minimalist example
+By the end of this guide, you will have a minimalist model running at your laptop in isolation and through chap, and have its code in your own GitHub repository.
 
-To get started with building your first CHAP-compatible model, you'll fork and clone a minimalist example repository. You can choose between Python or R based on your preferred programming language.
+
+Please consult the github guide of the previous session if you get unsure on how to fork and clone.
 
 ## Choose Your Language
 
-We provide two minimalist example repositories demonstrating CHAP-compatible models. You should choose one based on your preferred programming language (either R or Python):
+We provide two minimalist example repositories demonstrating Chap-compatible models. 
+They both implement the same simple linear regression model that predicts disease cases from rainfall and temperature.
+
+You should choose one based on your preferred programming language (either R or Python):
 
 | Language | Repository | Environment Manager |
 |----------|-----------|---------------------|
 | Python | [minimalist_example_uv](https://github.com/dhis2-chap/minimalist_example_uv) | uv |
 | R | [minimalist_example_r](https://github.com/dhis2-chap/minimalist_example_r) | renv |
 
-Both repositories implement the same simple linear regression model that predicts disease cases from rainfall and temperature. Choose the one matching your preferred language.
+ 
 
 ## Fork the Repository
 

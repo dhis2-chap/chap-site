@@ -1,4 +1,5 @@
 # 4. Homework
+Perform all the verification steps to ensure that you are up to speed with the webinar series and can in a smooth way follow the coming sessions.
 
 ### 1. Terminal Basics
 

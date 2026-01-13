@@ -1,7 +1,7 @@
 # 1. Installing CHAP
+In this guide, you'll install the CHAP command-line tool. Once installed, you can run chap evaluate to test any model against real datasets — which you'll do in the next guide in this session.
 
 ## Why CHAP?
-
 CHAP (Climate and Health Assessment Platform) is a tool for developing and evaluating disease prediction models that use climate data. The `chap` command-line tool allows you to:
 
 - Evaluate models on historical data
