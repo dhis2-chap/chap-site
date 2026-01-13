@@ -22,22 +22,14 @@ This session is focused on getting you set up with CHAP and make your first mode
 
 <details markdown="1"> <summary><strong style="font-size: 16px">Guides from session 3</strong></summary>
 
-These guides will help you install CHAP, set up a model repository, and make your first model modifications. Work through the guides in order. Each guide has an Exercise section at the end with verification steps.
+These guides will help you install CHAP and set up a model repository. The README in the repository you clone contains instructions for modifying and running your model.
 
 ## [1. Installing CHAP](install-chap.md)
 
 Install the CHAP command-line tool using uv. This tool is required for evaluating and testing your models.
 
-## [2. Fork a Minimalist Example](fork-example.md)
+## [2. Implement your own model from a minimalist example](fork-example.md)
 
-Fork and clone an example model repository. Choose between Python (uv) or R (renv) depending on your preferred language.
-
-## [3. Making Model Alterations](modify-model.md)
-
-Learn the structure of a CHAP-compatible model and make simple modifications to the example code.
-
-## [4. Run Your Model Through CHAP](run-model.md)
-
-Learn how the MLproject file works and run evaluations using the CHAP command-line tool.
+Fork and clone an example model repository. Choose between Python (uv) or R depending on your preferred language. Then follow the README in the repository for next steps.
 
 </details>

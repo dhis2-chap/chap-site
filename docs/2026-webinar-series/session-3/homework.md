@@ -8,15 +8,15 @@
 
 ### 2. Fork and Clone an Example
 
-- Read [Fork a Minimalist Example](fork-example.md)
-- Fork either the Python (uv) or R (renv) example repository
+- Read [Implement your own model from a minimalist example](fork-example.md)
+- Fork either the Python (uv) or R example repository
 - Clone your fork to your local machine
-- Run the model in isolated mode
+- Follow the README in the repository to run the model in isolated mode
 - Verification: The `isolated_run` script completes without errors
 
 ### 3. Make a Model Modification
 
-- Read [Making Model Alterations](modify-model.md)
+- Follow the "Making model alterations" section in the repository README
 - Make a simple modification to the model (e.g., change the model type, adjust features)
 - Test your changes by running `isolated_run`
 - Verification: Your modified model runs successfully
