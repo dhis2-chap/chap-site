@@ -1,4 +1,4 @@
-# Session 1
+# Session 1 - overall intro to the series
 
 This session introduces the core concepts of spatiotemporal modeling and introduces the webinar and workshop schedule. Participants will engage in use case brainstorming to identify real-world problem areas where climate data can be operationalized for health forecasting. This webinar sets the foundation for upcoming technical deep dives.
 

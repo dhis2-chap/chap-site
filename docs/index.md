@@ -40,7 +40,8 @@ hide:
       <div class="myst-card-body">
         <img src="assets/images/Modelers_Get-started-icon.svg" alt="Modellers" height="70">
         <p>
-          <strong>Modelers</strong>
+          <strong>Modelers:</strong>
+            "You want to build or adapt climate-health prediction models"
           <br>
           <a href="https://dhis2-chap.github.io/chap-core/external_models/index.html">Get started</a>
         </p>
