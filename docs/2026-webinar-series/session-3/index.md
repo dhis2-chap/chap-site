@@ -2,6 +2,7 @@
 
 This session is focused on getting you set up with CHAP and make your first model that runs through chap. You will do this by fork an existing minimalist example model repository, make some simple modifications to the model code, and run it through chap.
 
+**Get started:** [1. Installing CHAP](install-chap.md)
 
 <div style="font-size: 22px">Session 3</div>
 
@@ -11,7 +12,7 @@ This session is focused on getting you set up with CHAP and make your first mode
 
 [Homework](homework) is due January 21, 2026
 
-## Recording and guides
+## Recording and guids
 
 <details markdown="1">
   <summary><strong style="font-size: 16px">Recording of session 3</strong></summary>
