@@ -38,6 +38,6 @@ Run the following command:
 chap --help
 ```
 
-You should see output listing available commands including `evaluate2`, `plot-backtest`, and `export-metrics`.
+You should see output listing available commands including `evaluate`, `plot-backtest`, and `export-metrics`.
 
 **Verification:** If you see the help output with available commands, CHAP is installed correctly. You're ready for the next guide: [Implement your own model from a minimalist example](fork-example.md).
