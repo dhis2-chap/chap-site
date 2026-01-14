@@ -23,7 +23,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 Install CHAP as a global tool using uv:
 
 ```bash
-uv tool install chap-core
+uv tool install chap-core --python 3.13
 ```
 
 This installs the `chap` command-line tool globally, making it available from any directory.
