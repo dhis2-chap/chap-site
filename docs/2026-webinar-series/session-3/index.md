@@ -1,5 +1,8 @@
 # Session 3 - Build your first model and run it through Chap 
+
 By the end of this session, you'll have a working model that runs through CHAP and generates a prediction report. You'll start from a template, make a small modification, and run an evaluation — the same workflow you'll use for your own models later
+
+Before following this session, you should have completed [Session 2](../session-2). We assume you now have a system for virtual environments in either R or Python and know the basics of working on the command line, git and GitHub. It is also an advantage to have gone through [Session 1](../session-1) as well before starting this session.
 
 ## Recording
 *Recording will be available after the session*
