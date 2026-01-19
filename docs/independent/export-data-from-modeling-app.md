@@ -38,7 +38,7 @@ Click Start dry run to verify that the data and configuration are accepted. Cont
 
 Right-click the page and choose Inspect. In the Network tab, click **Send data** in the Modelling App and locate a request named stating with `create-backtest-with-data`. Open the request, go to the Payload tab, copy the full payload, and paste it into the shared Google Drive file. The picture below show where you could find the payload.
 
-<img src="./image.png" alt="Modelling App payload extraction" width="600px">
+<img src="image.png" alt="Modelling App payload extraction" width="600px">
 
 ## 10. Clean up (optional)
 
