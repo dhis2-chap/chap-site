@@ -3,7 +3,7 @@
     {
       "name": "modeling-app",
       "repo": "https://github.com/dhis2-chap/chap-frontend.git",
-      "branch": "eh/feat/create-a-new-guides-page-with-mdx",
+      "branch": "main",
       "sourceDir": "apps/modeling-app/docs/user-guides",
       "targetDir": "docs/guides/using-the-modeling-app",
       "sparseCheckout": true,
