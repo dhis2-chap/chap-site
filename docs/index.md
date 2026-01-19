@@ -40,9 +40,11 @@ hide:
       <div class="myst-card-body">
         <img src="assets/images/Modelers_Get-started-icon.svg" alt="Modellers" height="70">
         <p>
-          <strong>Modelers</strong>
+          <strong>Modelers:</strong>
+            <br>
+            <i>You want to build or adapt climate-health prediction models</i>
           <br>
-          <a href="guides/#model-development">Get started</a>
+          <a href="https://dhis2-chap.github.io/chap-core/external_models/index.html">Get started</a>
         </p>
       </div>
     </div>
@@ -52,6 +54,8 @@ hide:
         <img src="assets/images/Implementers_Get-started-icon.svg" alt="Implementers" height="70">
         <p>
           <strong>Implementers</strong>
+            <br>
+            <i>You want to deploy CHAP within a DHIS2 instance</i>
           <br>
           <a href="guides/#implement-chap-for-dhis2">Get started</a>
         </p>
@@ -62,7 +66,9 @@ hide:
       <div class="myst-card-body">
         <img src="assets/images/Community-icon.svg" alt="Community" height="70">
         <p>
-          <strong>Community</strong>
+          <strong>Community:</strong>
+            <br>
+            <i>You want to connect with others working on climate and health</i>
           <br>
           <a href="community/support/">Get connected</a>
         </p>

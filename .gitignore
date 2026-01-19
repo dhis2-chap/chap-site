@@ -12,3 +12,5 @@ docs/guides/using-the-modeling-app/
 # Temp directories for external doc fetching
 .modeling-app-temp/
 .*-repo-temp/
+.idea
+.venv

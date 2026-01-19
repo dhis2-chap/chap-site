@@ -1,5 +1,5 @@
-# Git and GitHub
-
+# 2. Git and GitHub
+By the end of this guide, you will have your own account at GitHub, where you can conveniently access and share code with the community.   
 ## Why?
 
 When working with code, you need to:
@@ -79,7 +79,7 @@ brew install git
 
 </details>
 
-**Linux (Ubuntu/Debian) / Windows (WSL):**
+**Linux (Ubuntu/Debian) / WSL:**
 
 <details markdown="1">
 <summary>Show command</summary>
@@ -117,7 +117,7 @@ brew install gh
 
 </details>
 
-Linux (Ubuntu/Debian) / Windows (WSL):
+Linux (Ubuntu/Debian) / WSL:
 
 <details markdown="1">
 <summary>Show command</summary>
@@ -273,7 +273,7 @@ brew install gh
 
 </details>
 
-Linux (Ubuntu/Debian) / Windows (WSL):
+Linux (Ubuntu/Debian) / WSL:
 
 <details markdown="1">
 <summary>Show command</summary>

@@ -1,5 +1,5 @@
-# Working on the Terminal
-
+# 1. Working on the Terminal
+By the end of this guide, you will know how to use the terminal to navigate your file system and run commands. 
 ## Why terminal?
 
 The terminal is essential for:
@@ -20,7 +20,7 @@ The terminal (also called the command line, shell, or CLI) is a text-based inter
 ## How to open/use the Terminal
 
 <details markdown="1">
-  <summary><strong style="font-size: 24px">Windows</strong></summary>
+  <summary><strong style="font-size: 20px">Windows</strong></summary>
 
 To use Chap on a Windows machine, you need to install the Windows Subsystem for Linux (WSL). WSL allows you to run a Linux environment on your Windows machine without the need for a separate virtual machine or dual booting. Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about).
 
@@ -28,7 +28,7 @@ The reason Windows users need to use WSL is that Chap depends on software that i
 
 **How to install WSL**
 
-1. Start **PowerShell** by searching for it in the Start Menu in Windows <br/> <img src="/kigali-webinar/images/image.png" alt="PowerShell Start Menu" width="500">
+1. Start **PowerShell** by searching for it in the Start Menu in Windows <br/> <img src="/2026-webinar-series/assets/image.png" alt="PowerShell Start Menu" width="500">
 
 2. Within the shell, execute the following command, and create **username** and **password** as promted.
 
@@ -40,14 +40,14 @@ The reason Windows users need to use WSL is that Chap depends on software that i
 
 4. Reopen PowerShell and you can start WSL by executing `wsl` in PowerShell. This will start WSL and bring you to a linux command line interface, where you could execute Linux commands.
 
-5. **Verify:** To verify everything works, you can try to execute `uname` in WSL. This should print "Linux", as shown below. <br/> <img src="/kigali-webinar/images/image-3.png" alt="PowerShell Start Menu" width="600">! <br/>
+5. **Verify:** To verify everything works, you can try to execute `uname` in WSL. This should print "Linux", as shown below. <br/> <img src="/2026-webinar-series/assets/image-3.png" alt="PowerShell Start Menu" width="600">! <br/>
 
 #### !!When continuing this tutorial, ensure you always execute commands within WSL, and **not** by using PowerShell.
 
 </details>
 
 <details markdown="1">
-  <summary><strong style="font-size: 24px">Mac</strong></summary>
+  <summary><strong style="font-size: 20px">Mac</strong></summary>
 
 Open the <strong>Terminal</strong> application.
 
@@ -80,7 +80,7 @@ Re-run `brew --version`. If still missing, install Homebrew from https://brew.sh
 </details>
 
 <details markdown="1">
-  <summary><strong style="font-size: 24px">Linux</strong></summary>
+  <summary><strong style="font-size: 20px">Linux</strong></summary>
 
 Open your terminal, and you should be good to go to continue to the next section.
 
@@ -99,7 +99,7 @@ code .
 <details markdown="1">
 <summary><strong >Visual Studio Code screenshot</strong></summary>
 
-<img src="/kigali-webinar/images/image-4.png" alt="PowerShell Start Menu" width="700">
+<img src="/2026-webinar-series/assets/image-4.png" alt="PowerShell Start Menu" width="700">
 
 </details>
 
