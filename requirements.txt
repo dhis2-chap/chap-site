@@ -3,5 +3,6 @@ mkdocs-material
 mkdocs-video
 mkdocs-gen-files
 mkdocs-minify-plugin
+mkdocs-awesome-pages-plugin
 pymdown-extensions
 ruamel.yaml>=0.18.0

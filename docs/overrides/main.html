@@ -1,26 +1,15 @@
-{% extends "base.html" %}
-
-{% block header %}
-  {% include "thin-header.html" %}  {# your thin top header #}
-  {{ super() }}                {# Material header #}
-{% endblock %}
-
-{% block tabs %}
-  {{ super() }}
-  {% if page and page.url and "guides/chap-core" in page.url %}
-  <nav class="doc-subnav">
-        <a href="{{ 'guides/chap-core/' | url }}" {% if page.url == "guides/chap-core/" or page.url == "guides/chap-core/index.html" %}class="active"{% endif %}>Home</a>
-    <a href="{{ 'guides/chap-core/modeling-app/' | url }}" {% if "guides/chap-core/modeling-app" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Modeling App</a>
-    <a href="{{ 'guides/chap-core/external_models/' | url }}" {% if "guides/chap-core/external_models" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Model Developers</a>
-    <a href="{{ 'guides/chap-core/chap-cli/' | url }}" {% if "guides/chap-core/chap-cli" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>CLI</a>
-    <a href="{{ 'guides/chap-core/contributor/' | url }}" {% if "guides/chap-core/contributor" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Contributors</a>
-    <a href="{{ 'guides/chap-core/webapi/' | url }}" {% if "guides/chap-core/webapi" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Web API</a>
-    <a href="{{ 'guides/chap-core/api/' | url }}" {% if "guides/chap-core/api/" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>API Reference</a>
-    <a href="{{ 'guides/chap-core/changelog/' | url }}" {% if "guides/chap-core/changelog" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Changelog</a>
-  </nav>
-  {% endif %}
-{% endblock %}
-
-{% block footer %}
-  {% include "footer.html" %}
-{% endblock %}
+{% extends "base.html" %} {% block header %} {% include "thin-header.html" %} {{
+super() }} {% endblock %} {% block tabs %} {{ super() }} {% if page and page.url
+and "guides/chap-core" in page.url %}
+<nav class="doc-subnav">
+        <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/' | url }}" {% if page.url == "guides/chap-core/" or page.url == "guides/chap-core/index.html" %}class="active"{% endif %}>Getting Started</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/modeling-app/' | url }}" {% if "guides/chap-core/modeling-app" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Modeling App</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/external_models/' | url }}" {% if "guides/chap-core/external_models" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Model Developers</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/chap-cli/' | url }}" {% if "guides/chap-core/chap-cli" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>CLI</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/contributor/' | url }}" {% if "guides/chap-core/contributor" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Contributors</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/webapi/' | url }}" {% if "guides/chap-core/webapi" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Web API</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/api/' | url }}" {% if "guides/chap-core/api/" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>API Reference</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/changelog/' | url }}" {% if "guides/chap-core/changelog" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Changelog</a></li>
+</nav>
+{% endif %} {% endblock %} {% block footer %} {% include "footer.html" %} {%
+endblock %}
