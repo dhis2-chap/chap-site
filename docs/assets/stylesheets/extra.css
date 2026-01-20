@@ -19,16 +19,16 @@ h1:first-of-type {
 
 /* --- Customize MkDocs Material top nav bar --- */
 .md-main__inner {
-  margin-top: 0
+  margin-top: 0;
 }
 
 .md-content__inner {
-  padding-top: 0
+  padding-top: 0;
 }
 
 .md-header {
-  background-color: #ffffff !important;  /* white background */
-  color: #333333 !important;             /* dark gray text */
+  background-color: #ffffff !important; /* white background */
+  color: #333333 !important; /* dark gray text */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* subtle shadow */
 }
 
@@ -37,21 +37,22 @@ h1:first-of-type {
 /* */
 
 /* Logo and title text inside header */
-.md-header__title, 
-.md-header__topic, 
+.md-header__title,
+.md-header__topic,
 .md-header__title a,
 .md-header__button {
   color: #444444 !important;
 }
 
 /* Nav links (desktop) */
-.md-tabs, .md-nav__link {
+.md-tabs,
+.md-nav__link {
   color: #555555 !important;
 }
 
 .md-tabs__link--active,
 .md-nav__link--active {
-  color: #000000 !important;  /* darker for active page */
+  color: #000000 !important; /* darker for active page */
   font-weight: 500;
 }
 
@@ -410,5 +411,89 @@ article > main > div > div:first-child {
   padding-right: 500px;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: rgb(232,236,241);
+  background-color: rgb(232, 236, 241);
+}
+
+/* Secondary horizontal navigation bar for Documentation section */
+.doc-subnav {
+  display: flex;
+  flex-direction: row;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+  /* Align with top menu - match .md-tabs padding */
+  padding-left: 0.8rem;
+  width: 100%;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.doc-subnav__list {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 76.25em) {
+  .doc-subnav {
+    padding-left: calc((100% - 61rem) / 2 + 0.8rem);
+  }
+}
+
+.doc-subnav a {
+  padding: 0.4rem 0.8rem;
+  color: #555;
+  text-decoration: none;
+  font-size: 0.65rem;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.doc-subnav a:hover {
+  background: #e8e8e8;
+  color: #000;
+}
+
+.doc-subnav a.active {
+  color: #1976d2;
+  font-weight: 500;
+  border-bottom: 2px solid #1976d2;
+  background: transparent;
+}
+
+/* Hide top-level sidebar items on Documentation pages - only show nested items */
+/* This hides the horizontal sub-nav items (Home, Modeling App, CLI, etc.) from the sidebar */
+.md-nav--primary
+  > .md-nav__list
+  > .md-nav__item
+  > .md-nav
+  > .md-nav__list
+  > .md-nav__item
+  > .md-nav__link {
+  display: none;
+}
+
+/* Show only the expanded/active section's children */
+.md-nav--primary
+  > .md-nav__list
+  > .md-nav__item
+  > .md-nav
+  > .md-nav__list
+  > .md-nav__item--active
+  > .md-nav__link {
+  display: none;
+}
+
+/* Hide all top-level items in Documentation section sidebar except the active one's children */
+.md-nav--primary
+  > .md-nav__list
+  > .md-nav__item
+  > .md-nav
+  > .md-nav__list
+  > .md-nav__item:not(.md-nav__item--active) {
+  display: none;
 }
