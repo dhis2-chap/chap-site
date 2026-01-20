@@ -478,36 +478,3 @@ article > main > div > div:first-child {
   padding: 0.4rem 0rem 0.4rem 0rem;
   background: transparent;
 }
-
-/* Hide top-level sidebar items on Documentation pages - only show nested items */
-/* This hides the horizontal sub-nav items (Home, Modeling App, CLI, etc.) from the sidebar */
-.md-nav--primary
-  > .md-nav__list
-  > .md-nav__item
-  > .md-nav
-  > .md-nav__list
-  > .md-nav__item
-  > .md-nav__link {
-  display: none;
-}
-
-/* Show only the expanded/active section's children */
-.md-nav--primary
-  > .md-nav__list
-  > .md-nav__item
-  > .md-nav
-  > .md-nav__list
-  > .md-nav__item--active
-  > .md-nav__link {
-  display: none;
-}
-
-/* Hide all top-level items in Documentation section sidebar except the active one's children */
-.md-nav--primary
-  > .md-nav__list
-  > .md-nav__item
-  > .md-nav
-  > .md-nav__list
-  > .md-nav__item:not(.md-nav__item--active) {
-  display: none;
-}

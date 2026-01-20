@@ -2,14 +2,40 @@
 super() }} {% endblock %} {% block tabs %} {{ super() }} {% if page and page.url
 and "guides/chap-core" in page.url %}
 <nav class="doc-subnav">
-        <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/' | url }}" {% if page.url == "guides/chap-core/" or page.url == "guides/chap-core/index.html" %}class="active"{% endif %}>Getting Started</a></li>
-      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/modeling-app/' | url }}" {% if "guides/chap-core/modeling-app" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Modeling App</a></li>
-      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/external_models/' | url }}" {% if "guides/chap-core/external_models" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Model Developers</a></li>
-      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/chap-cli/' | url }}" {% if "guides/chap-core/chap-cli" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>CLI</a></li>
-      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/contributor/' | url }}" {% if "guides/chap-core/contributor" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Contributors</a></li>
-      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/webapi/' | url }}" {% if "guides/chap-core/webapi" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Web API</a></li>
-      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/api/' | url }}" {% if "guides/chap-core/api/" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>API Reference</a></li>
-      <li class="doc-subnav__item"><a href="{{ 'guides/chap-core/changelog/' | url }}" {% if "guides/chap-core/changelog" in page.url and page.url != "guides/chap-core/" %}class="active"{% endif %}>Changelog</a></li>
+  <ul class="doc-subnav__list">
+    <!-- DOC_SUBNAV_PLACEHOLDER -->
+  </ul>
 </nav>
+<style>
+  /* Hide top-level nav items in sidebar - they're shown in horizontal sub-nav */
+  .md-nav--primary
+    > .md-nav__list
+    > .md-nav__item
+    > .md-nav
+    > .md-nav__list
+    > .md-nav__item
+    > .md-nav__link {
+    display: none;
+  }
+  /* Hide non-active sections */
+  .md-nav--primary
+    > .md-nav__list
+    > .md-nav__item
+    > .md-nav
+    > .md-nav__list
+    > .md-nav__item:not(.md-nav__item--active) {
+    display: none;
+  }
+  /* Hide the active section's direct link too */
+  .md-nav--primary
+    > .md-nav__list
+    > .md-nav__item
+    > .md-nav
+    > .md-nav__list
+    > .md-nav__item--active
+    > .md-nav__link {
+    display: none;
+  }
+</style>
 {% endif %} {% endblock %} {% block footer %} {% include "footer.html" %} {%
 endblock %}

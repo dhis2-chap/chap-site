@@ -87,9 +87,6 @@ def clone_repository(config: SourceConfig, dry_run: bool = False) -> Path:
         print(f"  [DRY RUN] Would clone {config.repo} to {temp_path}")
         return temp_path
 
-    if temp_path.exists():
-        shutil.rmtree(temp_path)
-
     if config.sparse_checkout:
         run_command([
             "git", "clone", "--depth", "1", "--sparse",
@@ -270,6 +267,22 @@ def inject_subnav_into_template(nav: list, prefix: str, dry_run: bool = False) -
         print(f"  Warning: Template not found at {template_path}")
         return
 
+    def find_first_url(nav_item: Any) -> Optional[str]:
+        """Recursively find the first URL string in a nav structure."""
+        if isinstance(nav_item, str):
+            return nav_item
+        elif isinstance(nav_item, dict):
+            for _, value in nav_item.items():
+                result = find_first_url(value)
+                if result:
+                    return result
+        elif isinstance(nav_item, list):
+            for item in nav_item:
+                result = find_first_url(item)
+                if result:
+                    return result
+        return None
+
     # Extract top-level nav items for sub-nav
     subnav_items = []
     for item in nav:
@@ -281,21 +294,13 @@ def inject_subnav_into_template(nav: list, prefix: str, dry_run: bool = False) -
                     url_check = value.replace('.md', '').replace('index', '')
                     subnav_items.append((label, url, url_check))
                 elif isinstance(value, list):
-                    # Nested item: get the first child's URL
-                    first_child = value[0] if value else None
-                    if first_child:
-                        if isinstance(first_child, dict):
-                            for _, child_value in first_child.items():
-                                if isinstance(child_value, str):
-                                    url = f"{prefix}/{child_value}"
-                                    # Use folder name for URL check
-                                    folder = child_value.split('/')[0] if '/' in child_value else child_value
-                                    subnav_items.append((label, url, folder))
-                                    break
-                        elif isinstance(first_child, str):
-                            url = f"{prefix}/{first_child}"
-                            folder = first_child.split('/')[0] if '/' in first_child else first_child
-                            subnav_items.append((label, url, folder))
+                    # Nested item: find first URL recursively
+                    first_url = find_first_url(value)
+                    if first_url:
+                        url = f"{prefix}/{first_url}"
+                        # Use folder name for URL check
+                        folder = first_url.split('/')[0] if '/' in first_url else first_url
+                        subnav_items.append((label, url, folder))
 
     if dry_run:
         print(f"  [DRY RUN] Would inject {len(subnav_items)} sub-nav items into main.html")
