@@ -24,5 +24,11 @@
         Building your first model
       </p>
         </div>
+        <div class="webinar-card" onclick="location.href='session-4'">
+      <div class="webinar-card-title">Session 4 🔗</div>
+      <p class="webinar-card-subtitle">
+        Climate factors, climate change, and their health impacts
+      </p>
+        </div>
   </div>
 </div>
