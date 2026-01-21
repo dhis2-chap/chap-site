@@ -94,9 +94,9 @@ def clone_repository(config: SourceConfig, dry_run: bool = False) -> Path:
         ], cwd=PROJECT_ROOT)
         run_command(["git", "sparse-checkout", "init"], cwd=temp_path)
         run_command(["git", "sparse-checkout", "add", config.source_dir], cwd=temp_path)
-        # Also checkout mkdocs.yml if configured
+        # Also checkout mkdocs.yml if configured (use --skip-checks for files)
         if config.mkdocs_yml:
-            run_command(["git", "sparse-checkout", "add", config.mkdocs_yml], cwd=temp_path)
+            run_command(["git", "sparse-checkout", "add", "--skip-checks", config.mkdocs_yml], cwd=temp_path)
     else:
         run_command([
             "git", "clone", "--depth", "1",
