@@ -1,41 +1,26 @@
-{% extends "base.html" %} {% block header %} {% include "thin-header.html" %} {{
-super() }} {% endblock %} {% block tabs %} {{ super() }} {% if page and page.url
-and "guides/chap-core" in page.url %}
-<nav class="doc-subnav">
-  <ul class="doc-subnav__list">
-    <!-- DOC_SUBNAV_PLACEHOLDER -->
-  </ul>
-</nav>
-<style>
-  /* Hide top-level nav items in sidebar - they're shown in horizontal sub-nav */
-  .md-nav--primary
-    > .md-nav__list
-    > .md-nav__item
-    > .md-nav
-    > .md-nav__list
-    > .md-nav__item
-    > .md-nav__link {
-    display: none;
-  }
-  /* Hide non-active sections */
-  .md-nav--primary
-    > .md-nav__list
-    > .md-nav__item
-    > .md-nav
-    > .md-nav__list
-    > .md-nav__item:not(.md-nav__item--active) {
-    display: none;
-  }
-  /* Hide the active section's direct link too */
-  .md-nav--primary
-    > .md-nav__list
-    > .md-nav__item
-    > .md-nav
-    > .md-nav__list
-    > .md-nav__item--active
-    > .md-nav__link {
-    display: none;
-  }
-</style>
-{% endif %} {% endblock %} {% block footer %} {% include "footer.html" %} {%
-endblock %}
+{% extends "base.html" %}
+
+{% block header %}
+  {% include "thin-header.html" %}
+  {{ super() }}
+{% endblock %}
+
+{% block tabs %}
+  {{ super() }}
+  {% if page and page.url and "guides/chap-core" in page.url %}
+  <nav class="doc-subnav">
+    <ul class="doc-subnav__list">
+      {% include "_generated_subnav.html" %}
+    </ul>
+  </nav>
+  <style>
+    .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item > .md-nav__link { display: none; }
+    .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item:not(.md-nav__item--active) { display: none; }
+    .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--active > .md-nav__link { display: none; }
+  </style>
+  {% endif %}
+{% endblock %}
+
+{% block footer %}
+  {% include "footer.html" %}
+{% endblock %}
