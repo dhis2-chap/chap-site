@@ -3,13 +3,13 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 6px 6px;
 }
 
 .webinar-row {
   width: 100%;
   display: flex;
   justify-content: flex-start; /* Changed from space-around to flex-start */
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -18,7 +18,7 @@
   margin: 0;
   background-color: #f4f4f4;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  max-width: 235px;
   border: 3.5px solid;
   border-radius: 22px;
   border-color: #4051b5;
