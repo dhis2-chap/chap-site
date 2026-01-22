@@ -30,5 +30,17 @@
         Climate factors, climate change, and their health impacts
       </p>
         </div>
+        <div class="webinar-card" onclick="location.href='session-5'">
+      <div class="webinar-card-title">Session 5 🔗</div>
+      <p class="webinar-card-subtitle">
+        Fundamentals of statistical modeling
+      </p>
+        </div>
+        <div class="webinar-card" onclick="location.href='session-6'">
+      <div class="webinar-card-title">Session 6 🔗</div>
+      <p class="webinar-card-subtitle">
+        Climate data tools, GIS & data harmonization strategies
+      </p>
+        </div>
   </div>
 </div>
