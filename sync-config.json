@@ -8,17 +8,6 @@
       "targetDir": "docs/guides/using-the-modeling-app",
       "sparseCheckout": true,
       "tempDir": ".modeling-app-temp"
-    },
-    {
-      "name": "chap-core",
-      "repo": "https://github.com/dhis2-chap/chap-core.git",
-      "branch": "docs-reorganizing",
-      "sourceDir": "docs",
-      "targetDir": "docs/guides/chap-core",
-      "sparseCheckout": true,
-      "tempDir": ".chap-core-temp",
-      "mkdocsYml": "mkdocs.yml",
-      "navPlaceholder": "# CHAP_CORE_NAV_PLACEHOLDER"
     }
   ]
 }

@@ -6,8 +6,10 @@ theme:
   features:
     - navigation.instant
     - navigation.tabs
+    - navigation.sections
     - navigation.tracking
     - navigation.prune
+    - navigation.expand
     - content.code.copy
     - content.action.edit
   palette:
@@ -32,6 +34,8 @@ extra_javascript:
 
 plugins:
   - search
+  - multirepo:
+      cleanup: true
   - mkdocs-video:
       css_style:
         width: "100%"
@@ -74,8 +78,7 @@ nav:
           - 2026-webinar-series/session-3/install-chap.md
           - 2026-webinar-series/session-3/fork-example.md
           - 2026-webinar-series/session-3/homework.md
-  - "Chap Documentation":
-      # CHAP_CORE_NAV_PLACEHOLDER
+  - "Chap Documentation": '!import https://github.com/dhis2-chap/chap-core?branch=docs-reorganizing'
   - "Community":
       - community/support.md
       - community/newsletter.md

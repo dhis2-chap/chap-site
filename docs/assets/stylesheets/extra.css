@@ -478,3 +478,66 @@ article > main > div > div:first-child {
   padding: 0.4rem 0rem 0.4rem 0rem;
   background: transparent;
 }
+
+/* ============================================
+   Left Sidebar Navigation Styles
+   ============================================ */
+
+/* All navigation links - more spacing between items */
+.md-nav--primary .md-nav__link {
+  color: #37474f !important;
+  font-size: 0.6rem;
+  padding: 0.4rem 0.4rem;
+  margin: 0.25rem 0;
+  border-radius: 4px;
+  background-color: transparent !important;
+  transition: all 0.15s ease;
+}
+
+/* Navigation links hover state */
+.md-nav--primary .md-nav__link:hover {
+  color: rgb(25, 118, 210) !important;
+  background-color: #f5f5f5 !important;
+}
+
+/* Active/current page link - blue with thin blue rectangle border */
+.md-nav--primary .md-nav__link--active,
+.md-nav--primary .md-nav__link--active:hover {
+  color: rgb(25, 118, 210) !important;
+  background-color: rgba(25, 118, 210, 0.08) !important;
+  border: 1px solid rgb(25, 118, 210);
+  font-weight: 500;
+}
+
+/* Section titles (expandable parent items) */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link,
+.md-nav--primary .md-nav__item--nested > .md-nav__link {
+  font-weight: 600;
+  color: #263238 !important;
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding-left: 0rem !important;
+}
+
+/* Nested items indentation */
+.md-nav--primary .md-nav__item .md-nav__item .md-nav__link {
+  padding-left: 0.8rem;
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link {
+  color: #b0bec5 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link:hover {
+  color: #64b5f6 !important;
+  background-color: #2d2d2d !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link--active:hover {
+  color: #64b5f6 !important;
+  background-color: rgba(100, 181, 246, 0.15) !important;
+  border: 1px solid #64b5f6;
+}
