@@ -8,7 +8,6 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.tracking
-    - navigation.prune
     - navigation.expand
     - content.code.copy
     - content.action.edit
