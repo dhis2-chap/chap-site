@@ -5,7 +5,7 @@ hide:
   - toc
 ---
 
-# 
+#
 
 <!-- === BANNER SECTION === -->
 <div class="dhis2-banner">
@@ -35,42 +35,39 @@ hide:
 <!-- === LOGO CLOUD / USERS SECTION === -->
 <div class="dhis2-users">
   <div class="myst-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.5rem; padding:2rem 0;">
-    
     <div class="myst-card">
       <div class="myst-card-body">
         <img src="assets/images/Modelers_Get-started-icon.svg" alt="Modellers" height="70">
         <p>
-          <strong>Modelers:</strong>
+          <strong>Model developers</strong>
             <br>
             <i>You want to build or adapt climate-health prediction models</i>
           <br>
-          <a href="https://dhis2-chap.github.io/chap-core/external_models/index.html">Get started</a>
+          <b><a href="chap-documentation/external_models/">Get started</a></b>
         </p>
       </div>
     </div>
-
     <div class="myst-card">
       <div class="myst-card-body">
         <img src="assets/images/Implementers_Get-started-icon.svg" alt="Implementers" height="70">
         <p>
-          <strong>Implementers</strong>
+          <strong>DHIS2 Implementers</strong>
             <br>
             <i>You want to deploy CHAP within a DHIS2 instance</i>
           <br>
-          <a href="guides/#implement-chap-for-dhis2">Get started</a>
+          <b><a href="chap-documentation/modeling-app/">Get started</a></b>
         </p>
       </div>
     </div>
-
     <div class="myst-card">
       <div class="myst-card-body">
         <img src="assets/images/Community-icon.svg" alt="Community" height="70">
         <p>
-          <strong>Community:</strong>
+          <strong>Community</strong>
             <br>
             <i>You want to connect with others working on climate and health</i>
           <br>
-          <a href="community/support/">Get connected</a>
+          <b><a href="community/support/">Get connected</a></b>
         </p>
       </div>
     </div>
@@ -84,31 +81,28 @@ hide:
 <div class="modeling-components dhis2-justified">
   <h3>Chap builds on and integrates with DHIS2 to support real-world use</h3>
   <div class="dhis2-cards">
-    
     <div class="dhis2-card">
       <div class="dhis2-card-body">
         <img src="assets/images/Chap_icon.svg" alt="Chap Logo" height="70" class="dark:hidden">
         <p><strong>Chap Modeling Platform</strong></p>
         <p>Python-based processing engine for model orchestration, data pipelines, validation, metrics, and hyperparameter tuning. It integrates seamlessly with DHIS2 system for accessing health data and disseminating forecasts, while also functioning as a standalone Python package and command-line tool.</p>
-        <a href="https://github.com/dhis2-chap/chap-core" class="dhis2-primary-button">Get started</a>
+        <a href="chap-documentation/" class="dhis2-primary-button">Get started</a>
       </div>
     </div>
-
     <div class="dhis2-card">
       <div class="dhis2-card-body">
         <img src="assets/images/Modeling_icon.svg" alt="Modeling App Logo" height="70" class="dark:hidden">
         <p><strong>DHIS2 Modeling App</strong></p>
         <p>Pilot app for DHIS2 that provides seamless integration with the Chap Modeling Platform, providing a user-friendly interface within DHIS2 for selecting data to use to generate predictions in Chap – including data from the DHIS2 Climate App – train predictive models, visualize predictions, and evaluate model accuracy.</p>
-        <a href="https://apps.dhis2.org/app/a29851f9-82a7-4ecd-8b2c-58e0f220bc75" class="dhis2-primary-button">Get started</a>
+        <a href="chap-documentation/modeling-app/" class="dhis2-primary-button">Get started</a>
       </div>
     </div>
-
     <div class="dhis2-card">
       <div class="dhis2-card-body">
         <img src="assets/images/climateapp_icon.svg" alt="Climate App Logo" height="70" class="dark:hidden">
         <p><strong>DHIS2 Climate App</strong></p>
         <p>DHIS2 app to explore and import weather, climate, elevation, and other environmental data into DHIS2 data elements, making it available for use in the Chap Modeling Platform. The app uses several data sources, including ERA5-Land, considered to be the most accurate and complete climate dataset with worldwide coverage.</p>
-        <a href="https://apps.dhis2.org/app/effb986c-a3c7-485e-a2f6-5e54ff9df7c3" class="dhis2-primary-button">Get started</a>
+        <a href="https://dhis2.org/climate/climate-data/" class="dhis2-primary-button">Get started</a>
       </div>
     </div>
 
