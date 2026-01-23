@@ -77,7 +77,7 @@ nav:
           - 2026-webinar-series/session-3/install-chap.md
           - 2026-webinar-series/session-3/fork-example.md
           - 2026-webinar-series/session-3/homework.md
-  - "Chap Documentation": '!import https://github.com/dhis2-chap/chap-core?branch=docs-reorganizing'
+  - "Chap Documentation": "!import https://github.com/dhis2-chap/chap-core?branch=master"
   - "Community":
       - community/support.md
       - community/newsletter.md
