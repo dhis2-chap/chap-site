@@ -79,9 +79,6 @@ def clone_repository(config: SourceConfig, dry_run: bool = False) -> Path:
         print(f"  [DRY RUN] Would clone {config.repo} to {temp_path}")
         return temp_path
 
-    if temp_path.exists():
-        shutil.rmtree(temp_path)
-
     if config.sparse_checkout:
         run_command([
             "git", "clone", "--depth", "1", "--sparse",
@@ -105,28 +102,15 @@ def discover_docs(source_base: Path) -> list[DocInfo]:
     if not source_base.exists():
         return docs
 
-    for subdir in sorted(source_base.iterdir()):
-        if not subdir.is_dir():
-            continue
-
-        # Look for index.md or index.mdx
-        index_path = None
-        for ext in ['.md', '.mdx']:
-            candidate = subdir / f"index{ext}"
-            if candidate.exists():
-                index_path = candidate
-                break
-
-        if not index_path:
-            continue
-
-        images_dir = subdir / "images"
-        docs.append(DocInfo(
-            source_path=index_path,
-            source_dir=subdir,
-            slug=subdir.name,
-            images_dir=images_dir if images_dir.exists() else None
-        ))
+    for md_file in sorted(source_base.rglob('*.md')):
+        if md_file.is_file():
+            rel_path = md_file.relative_to(source_base)
+            docs.append(DocInfo(
+                source_path=md_file,
+                source_dir=source_base,
+                slug=str(rel_path),
+                images_dir=None
+            ))
 
     return docs
 
@@ -144,12 +128,13 @@ def copy_doc_with_images(doc: DocInfo, dest_base: Path, dry_run: bool = False) -
     """Copy a documentation file and its images to the destination."""
     content = doc.source_path.read_text(encoding='utf-8')
     transformed = transform_image_paths(content, doc.slug)
-    dest_md = dest_base / f"{doc.slug}.md"
+    dest_md = dest_base / doc.slug
 
     if dry_run:
         print(f"  [DRY RUN] Would copy {doc.source_path} -> {dest_md}")
         return dest_md
 
+    dest_md.parent.mkdir(parents=True, exist_ok=True)
     dest_md.write_text(transformed, encoding='utf-8')
 
     if doc.images_dir and doc.images_dir.exists():

@@ -1,8 +1,27 @@
 {% extends "base.html" %}
 
 {% block header %}
-  {% include "thin-header.html" %}  {# your thin top header #}
-  {{ super() }}                {# Material header #}
+  {% include "thin-header.html" %}
+  {{ super() }}
+{% endblock %}
+
+{% block tabs %}
+  {{ super() }}
+  {% if page and page.url and "chap-documentation" in page.url %}
+  <nav class="doc-subnav">
+    <ul class="doc-subnav__list">
+      <li class="doc-subnav__item"><a href="{{ 'chap-documentation/' | url }}" {% if page.url == "chap-documentation/" or page.url == "chap-documentation/index.html" %}class="active"{% endif %}>Getting Started</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'chap-documentation/external_models/' | url }}" {% if "chap-documentation/external_models" in page.url %}class="active"{% endif %}>Model Developers</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'chap-documentation/modeling-app/' | url }}" {% if "chap-documentation/modeling-app" in page.url %}class="active"{% endif %}>DHIS2 Implementers</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'chap-documentation/contributor/' | url }}" {% if "chap-documentation/contributor" in page.url %}class="active"{% endif %}>Contributors</a></li>
+    </ul>
+  </nav>
+  <style>
+    .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item > .md-nav__link { display: none; }
+    .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item:not(.md-nav__item--active) { display: none; }
+    .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--active > .md-nav__link { display: none; }
+  </style>
+  {% endif %}
 {% endblock %}
 
 {% block footer %}
