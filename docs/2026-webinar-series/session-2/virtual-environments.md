@@ -101,8 +101,38 @@ You should see something like `uv 0.9.0`.
 
 You need to have R installed to use renv. RStudio is a popular IDE for R, but is optional.
 
-- Download and install R from the [CRAN website](https://cran.r-project.org/).
-- (Optional) Download and install RStudio from the [RStudio website](https://posit.co/download/rstudio-desktop/).
+<details markdown="1">
+<summary><strong>macOS</strong></summary>
+
+```bash
+brew install r
+```
+
+(Optional) Install RStudio:
+
+```bash
+brew install --cask rstudio
+```
+
+</details>
+
+<details markdown="1">
+<summary><strong>Linux / WSL (Ubuntu/Debian)</strong></summary>
+
+```bash
+sudo apt update
+sudo apt install r-base
+```
+
+(Optional) Install RStudio by downloading the `.deb` file and installing it:
+
+```bash
+# Download the latest RStudio .deb from https://posit.co/download/rstudio-desktop/
+# Then install with:
+sudo apt install ./rstudio-*.deb
+```
+
+</details>
 
 ### 2. Install renv
 
