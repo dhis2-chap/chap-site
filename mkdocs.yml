@@ -76,15 +76,15 @@ nav:
       - "Session 4": 2026-webinar-series/session-4/index.md
       - "Session 5": 2026-webinar-series/session-5/index.md
       - "Session 6": 2026-webinar-series/session-6/index.md
-  - "Guides & Tutorials":
-      - Overview: guides/index.md
-      - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
-      - Model development: guides/#model-development
-      - Chap CLI Tool: guides/#run-chap-from-commandline
-      - Using the modeling app:
-          - Getting Started: guides/using-the-modeling-app/getting-started.md
-          - Creating an evaluation: guides/using-the-modeling-app/creating-an-evaluation.md
-          - Creating a prediction: guides/using-the-modeling-app/creating-a-prediction.md
+  #  - "Guides & Tutorials":
+  #      - Overview: guides/index.md
+  #      - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
+  #      - Model development: guides/#model-development
+  #      - Chap CLI Tool: guides/#run-chap-from-commandline
+  #      - Using the modeling app:
+  #          - Getting Started: guides/using-the-modeling-app/getting-started.md
+  #          - Creating an evaluation: guides/using-the-modeling-app/creating-an-evaluation.md
+  #          - Creating a prediction: guides/using-the-modeling-app/creating-a-prediction.md
   - "Community":
       - community/support.md
       - community/newsletter.md
