@@ -7,13 +7,13 @@
 
 {% block tabs %}
   {{ super() }}
-  {% if page and page.url and "chap-documentation" in page.url %}
+  {% if page and page.url and "chap-modeling-platform" in page.url %}
   <nav class="doc-subnav">
     <ul class="doc-subnav__list">
-      <li class="doc-subnav__item"><a href="{{ 'chap-documentation/' | url }}" {% if page.url == "chap-documentation/" or page.url == "chap-documentation/index.html" %}class="active"{% endif %}>Getting Started</a></li>
-      <li class="doc-subnav__item"><a href="{{ 'chap-documentation/external_models/' | url }}" {% if "chap-documentation/external_models" in page.url %}class="active"{% endif %}>Model Developers</a></li>
-      <li class="doc-subnav__item"><a href="{{ 'chap-documentation/modeling-app/' | url }}" {% if "chap-documentation/modeling-app" in page.url %}class="active"{% endif %}>DHIS2 Implementers</a></li>
-      <li class="doc-subnav__item"><a href="{{ 'chap-documentation/contributor/' | url }}" {% if "chap-documentation/contributor" in page.url %}class="active"{% endif %}>Contributors</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'chap-modeling-platform/' | url }}" {% if page.url == "chap-modeling-platform/" or page.url == "chap-modeling-platform/index.html" %}class="active"{% endif %}>Getting Started</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'chap-modeling-platform/external_models/' | url }}" {% if "chap-modeling-platform/external_models" in page.url %}class="active"{% endif %}>Model Developers</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'chap-modeling-platform/modeling-app/' | url }}" {% if "chap-modeling-platform/modeling-app" in page.url %}class="active"{% endif %}>DHIS2 Implementers</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'chap-modeling-platform/contributor/' | url }}" {% if "chap-modeling-platform/contributor" in page.url %}class="active"{% endif %}>Contributors</a></li>
     </ul>
   </nav>
   <style>

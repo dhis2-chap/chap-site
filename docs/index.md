@@ -43,7 +43,7 @@ hide:
             <br>
             <i>You want to build or adapt climate-health prediction models</i>
           <br>
-          <b><a href="chap-documentation/external_models/">Get started</a></b>
+          <b><a href="chap-modeling-platform/external_models/">Get started</a></b>
         </p>
       </div>
     </div>
@@ -55,7 +55,7 @@ hide:
             <br>
             <i>You want to deploy CHAP within a DHIS2 instance</i>
           <br>
-          <b><a href="chap-documentation/modeling-app/">Get started</a></b>
+          <b><a href="chap-modeling-platform/modeling-app/">Get started</a></b>
         </p>
       </div>
     </div>
@@ -86,7 +86,7 @@ hide:
         <img src="assets/images/Chap_icon.svg" alt="Chap Logo" height="70" class="dark:hidden">
         <p><strong>Chap Modeling Platform</strong></p>
         <p>Python-based processing engine for model orchestration, data pipelines, validation, metrics, and hyperparameter tuning. It integrates seamlessly with DHIS2 system for accessing health data and disseminating forecasts, while also functioning as a standalone Python package and command-line tool.</p>
-        <a href="chap-documentation/" class="dhis2-primary-button">Get started</a>
+        <a href="chap-modeling-platform/" class="dhis2-primary-button">Get started</a>
       </div>
     </div>
     <div class="dhis2-card">
@@ -94,7 +94,7 @@ hide:
         <img src="assets/images/Modeling_icon.svg" alt="Modeling App Logo" height="70" class="dark:hidden">
         <p><strong>DHIS2 Modeling App</strong></p>
         <p>Pilot app for DHIS2 that provides seamless integration with the Chap Modeling Platform, providing a user-friendly interface within DHIS2 for selecting data to use to generate predictions in Chap – including data from the DHIS2 Climate App – train predictive models, visualize predictions, and evaluate model accuracy.</p>
-        <a href="chap-documentation/modeling-app/" class="dhis2-primary-button">Get started</a>
+        <a href="chap-modeling-platform/modeling-app/" class="dhis2-primary-button">Get started</a>
       </div>
     </div>
     <div class="dhis2-card">
