@@ -4,7 +4,7 @@
       "name": "modeling-app",
       "repo": "https://github.com/dhis2-chap/chap-frontend.git",
       "branch": "main",
-      "sourceDir": "apps/modeling-app/docs/user-guides",
+      "sourceDir": "apps/modeling-app/docs/chap-modeling-platform",
       "targetDir": "docs/imported/using-the-modeling-app",
       "sparseCheckout": true,
       "tempDir": ".modeling-app-temp"
