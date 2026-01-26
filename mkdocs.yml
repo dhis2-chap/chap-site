@@ -96,6 +96,8 @@ nav:
       - Contributing:
           - community/contributing/contribute_model.md
           - community/contributing/contribute_code.md
+  - "Research":
+      - research/publications.md
   - "About":
       - about/index.md
       - about/motivation.md
