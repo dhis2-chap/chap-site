@@ -22,6 +22,8 @@ Fork and clone an example model repository. Choose between Python (uv) or R depe
 
 To follow the progression of the webinar series, you should **[verify that you are all set](homework)** by January 21, 2026
 
+## Learn more
+To learn more, please continue to the following webinar sessions (4,5,6) or consult our [guide to learn modeling with disease modeling as case](https://chap.dhis2.org/chap-modeling-platform/external_models/learn_modelling/). 
 ## Get help
 
 [Community of Practice for webinar series, session 3](https://community.dhis2.org/c/development/chap/84)
