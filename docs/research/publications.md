@@ -1,20 +1,20 @@
-# Openly shared manuscript ideas related to the CHAP work
+# Openly shared manuscript ideas related to the Chap work
 
 This page lists ideas we have for upcoming papers. We share them here, in order to invite anyone interested to join forces with us to do it together instead of duplicating efforts our field where so much research awaits being done. Many of these are loose ideas, where we are not yet committed, meaning that we have not yet discussed rigorously and performed an (informal) literature review to ensure that the idea appear unique and worthwhile. We invite everyone to join the discussion about whether a manuscript idea appears worthwhile, and if so, what would be a most useful direction ahead. We are very happy to have people join this discussion. Also, if other people already have initiatives or want to drive initiatives related to some of these ideas, we are open to join as contributors in projects led by others.
 
-## The Climate Health Analysis Platform (CHAP): an ecosystem for data, models and analytics connecting climate and health
-A paper that presents the overall platform - its components, its capabilities, its usage modes, and its plans for further continuous development. Should aim for a high profile paper connecting a large number of authors having contributed in a variety of ways. Drawing some peripheral inspiration from https://www.nature.com/articles/s42256-021-00413-z .
+## The Climate Health Analysis Platform (Chap): an ecosystem for data, models and analytics connecting climate and health
+A paper that presents the overall platform - its components, its capabilities, its usage modes, and its plans for further continuous development. Should aim for a high profile paper connecting a large number of authors having contributed in a variety of ways. Drawing some peripheral inspiration from [https://www.nature.com/articles/s42256-021-00413-z](https://www.nature.com/articles/s42256-021-00413-z).
 
 _Stage: 2) committed on idea, manuscript not started_
  
 
 ## Minimum information and standardized representations for climate-informed disease incidence prediction methods
-(inspired by e.g. https://www.nature.com/articles/ng1201-365 and https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2018.02206/full)
+(inspired by e.g. [https://www.nature.com/articles/ng1201-365](https://www.nature.com/articles/ng1201-365) and [https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2018.02206/full](https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2018.02206/full))
  
 _Stage: 1) loose idea, not yet committed_
 
 ## The spatio-temporally harmonised climate and health database
-(inspired by e.g. https://academic.oup.com/nar/article/47/D1/D339/5144151?login=false, but containing both public data and public metadata descriptions of non-public datasets)
+(inspired by e.g. [https://academic.oup.com/nar/article/47/D1/D339/5144151?login=false](https://academic.oup.com/nar/article/47/D1/D339/5144151?login=false), but containing both public data and public metadata descriptions of non-public datasets)
  
 _Stage: 1) loose idea, not yet committed_
 
