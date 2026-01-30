@@ -52,7 +52,7 @@ article {
 .md-tabs {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   color: #2c2c2c !important;
-  background-color: #fdfdfd;
+  background-color: #ffffff;
 }
 
 .md-tabs__link--active,
@@ -483,8 +483,10 @@ footer.article a:hover {
    Left Sidebar Navigation
    ============================================ */
 
-.md-sidebar--primary .md-sidebar__scrollwrap {
-  padding-left: 1rem;
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    padding-left: 1rem;
+  }
 }
 
 .md-nav {
@@ -553,18 +555,20 @@ footer.article a:hover {
   border: 1px solid #64b5f6;
 }
 
-/* Nested section titles alignment */
-.md-nav__item--section > .md-nav__title {
-  display: none;
+/* Nested section titles alignment (desktop only, preserve back button on mobile) */
+@media screen and (min-width: 76.25em) {
+  .md-nav__item--section > .md-nav__title {
+    display: none;
+  }
+
+  .md-nav__item--nested > .md-nav > .md-nav__title {
+    display: none;
+  }
 }
 
 .md-nav__item--nested > label.md-nav__link {
   margin-left: 0;
   padding-left: 0.55rem;
-}
-
-.md-nav__item--nested > .md-nav > .md-nav__title {
-  display: none;
 }
 
 .md-nav__item--nested > .md-nav {
