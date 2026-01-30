@@ -73,7 +73,7 @@ hide:
     </div>
   </div>
   <div style="width: 100%; text-align: center">
-    <a href="./about/" class="dhis2-primary-button">Learn more</a>
+    <a href="./about/" class="dhis2-primary-button">About the Chap Modeling Platform</a>
   </div>
 </div>
 
@@ -93,16 +93,16 @@ hide:
       <div class="dhis2-card-body">
         <img src="assets/images/Modeling_icon.svg" alt="Modeling App Logo" height="70" class="dark:hidden">
         <p><strong>DHIS2 Modeling App</strong></p>
-        <p>Pilot app for DHIS2 that provides seamless integration with the Chap Modeling Platform, providing a user-friendly interface within DHIS2 for selecting data to use to generate predictions in Chap – including data from the DHIS2 Climate App – train predictive models, visualize predictions, and evaluate model accuracy.</p>
+        <p>Pilot app for DHIS2 that provides seamless integration with the Chap Modeling Platform, providing a user-friendly interface within DHIS2 for selecting data to use to generate predictions in Chap – including data from the DHIS2 Climate App and Climate Tools – train predictive models, visualize predictions, and evaluate model accuracy.</p>
         <a href="chap-modeling-platform/modeling-app/" class="dhis2-primary-button">Get started</a>
       </div>
     </div>
     <div class="dhis2-card">
       <div class="dhis2-card-body">
         <img src="assets/images/climateapp_icon.svg" alt="Climate App Logo" height="70" class="dark:hidden">
-        <p><strong>DHIS2 Climate App</strong></p>
-        <p>DHIS2 app to explore and import weather, climate, elevation, and other environmental data into DHIS2 data elements, making it available for use in the Chap Modeling Platform. The app uses several data sources, including ERA5-Land, considered to be the most accurate and complete climate dataset with worldwide coverage.</p>
-        <a href="https://dhis2.org/climate/climate-data/" class="dhis2-primary-button">Get started</a>
+        <p><strong>DHIS2 Climate Data</strong></p>
+        <p>Chap Modeling Platform utilizes <a href="https://dhis2.org/climate/climate-data/" target="_blank">DHIS2 Climate App</a> and <a href="https://climate-tools.dhis2.org/" target="_blank">Climate Tool</a>, which enable flexible incorporation of climate, weather, environmental, and other geospatial data into DHIS2. This data then flows through the DHIS2 Modeling App, where the user could select which data sources to be used by the Chap Modeling Platform for model evaluation and disease prediction.</p>
+        <a href="climate-data/" class="dhis2-primary-button">Get started</a>
       </div>
     </div>
 

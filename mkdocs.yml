@@ -90,6 +90,7 @@ nav:
   #        - Getting Started: guides/using-the-modeling-app/getting-started.md
   #        - Creating an evaluation: guides/using-the-modeling-app/creating-an-evaluation.md
   #        - Creating a prediction: guides/using-the-modeling-app/creating-a-prediction.md
+  - "Climate Data": climate-data/index.md
   - "Community":
       - community/support.md
       - community/newsletter.md

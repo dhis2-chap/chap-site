@@ -575,3 +575,60 @@ footer.article a:hover {
 .md-nav__item--nested > .md-nav > .md-nav__list > .md-nav__item {
   padding-left: 0;
 }
+
+/* ============================================
+   Climate Data Items
+   ============================================ */
+
+.climate-items {
+  margin-top: 2rem;
+}
+
+.climate-item {
+  display: block;
+  margin-bottom: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.climate-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-color: #1976d2;
+}
+
+.climate-item__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.6rem;
+}
+
+.climate-item__body {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.climate-item__img {
+  width: 40%;
+  flex-shrink: 0;
+  border-radius: 6px;
+  object-fit: cover;
+  aspect-ratio: 1122 / 632;
+}
+
+.climate-item__desc {
+  flex: 1;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #555;
+  overflow: hidden;
+}
+
