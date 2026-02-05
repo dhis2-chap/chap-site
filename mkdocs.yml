@@ -64,23 +64,6 @@ markdown_extensions:
 nav:
   - Home: index.md
   - "Chap Modeling Platform": "!import https://github.com/dhis2-chap/chap-core?branch=master"
-  - "Modeling Webinar Series":
-      - "Overview": 2026-webinar-series/index.md
-      - "Session 1": 2026-webinar-series/session-1/index.md
-      - "Session 2":
-          - 2026-webinar-series/session-2/index.md
-          - 2026-webinar-series/session-2/terminal.md
-          - 2026-webinar-series/session-2/git-github.md
-          - 2026-webinar-series/session-2/virtual-environments.md
-          - 2026-webinar-series/session-2/homework.md
-      - "Session 3":
-          - 2026-webinar-series/session-3/index.md
-          - 2026-webinar-series/session-3/install-chap.md
-          - 2026-webinar-series/session-3/fork-example.md
-          - 2026-webinar-series/session-3/homework.md
-      - "Session 4": 2026-webinar-series/session-4/index.md
-      - "Session 5": 2026-webinar-series/session-5/index.md
-      - "Session 6": 2026-webinar-series/session-6/index.md
   #- "Guides & Tutorials":
   #    - Overview: guides/index.md
   #    - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
