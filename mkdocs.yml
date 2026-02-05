@@ -73,6 +73,7 @@ nav:
   #        - Getting Started: guides/using-the-modeling-app/getting-started.md
   #        - Creating an evaluation: guides/using-the-modeling-app/creating-an-evaluation.md
   #        - Creating a prediction: guides/using-the-modeling-app/creating-a-prediction.md
+  - "Modeling Webinar": "chap-modeling-platform/kigali-workshop/kigali-webinar-series"
   - "Climate Data": climate-data/index.md
   - "Community":
       - community/support.md
