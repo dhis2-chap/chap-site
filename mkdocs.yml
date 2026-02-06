@@ -6,7 +6,9 @@ theme:
   features:
     - navigation.instant
     - navigation.tabs
+    - navigation.sections
     - navigation.tracking
+    - navigation.expand
     - content.code.copy
     - content.action.edit
   palette:
@@ -32,6 +34,8 @@ extra_javascript:
 plugins:
   - search
   - markdown-exec
+  - multirepo:
+      cleanup: true
   - mkdocs-video:
       css_style:
         width: "100%"
@@ -60,35 +64,26 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - "Modeling Webinar Series":
-      - "Overview": 2026-webinar-series/index.md
-      - "Session 1": 2026-webinar-series/session-1/index.md
-      - "Session 2":
-          - 2026-webinar-series/session-2/index.md
-          - 2026-webinar-series/session-2/terminal.md
-          - 2026-webinar-series/session-2/git-github.md
-          - 2026-webinar-series/session-2/virtual-environments.md
-          - 2026-webinar-series/session-2/homework.md
-      - "Session 3":
-          - 2026-webinar-series/session-3/index.md
-          - 2026-webinar-series/session-3/install-chap.md
-          - 2026-webinar-series/session-3/fork-example.md
-          - 2026-webinar-series/session-3/homework.md
-  - "Guides & Tutorials":
-      - Overview: guides/index.md
-      - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
-      - Model development: guides/#model-development
-      - Chap CLI Tool: guides/#run-chap-from-commandline
-      - Using the modeling app:
-          - Getting Started: guides/using-the-modeling-app/getting-started.md
-          - Creating an evaluation: guides/using-the-modeling-app/creating-an-evaluation.md
-          - Creating a prediction: guides/using-the-modeling-app/creating-a-prediction.md
+  - "Chap Modeling Platform": "!import https://github.com/dhis2-chap/chap-core?branch=master"
+  #- "Guides & Tutorials":
+  #    - Overview: guides/index.md
+  #    - Implement Chap for DHIS2: guides/#implement-chap-for-dhis2
+  #    - Model development: guides/#model-development
+  #    - Chap CLI Tool: guides/#run-chap-from-commandline
+  #    - Using the modeling app:
+  #        - Getting Started: guides/using-the-modeling-app/getting-started.md
+  #        - Creating an evaluation: guides/using-the-modeling-app/creating-an-evaluation.md
+  #        - Creating a prediction: guides/using-the-modeling-app/creating-a-prediction.md
+  - "Modeling Webinar": "chap-modeling-platform/kigali-workshop/kigali-webinar-series"
+  - "Climate Data": climate-data/index.md
   - "Community":
       - community/support.md
       - community/newsletter.md
       - Contributing:
           - community/contributing/contribute_model.md
           - community/contributing/contribute_code.md
+  - "Research":
+      - research/publications.md
   - "About":
       - about/index.md
       - about/motivation.md

@@ -20,7 +20,7 @@ Go to Models, click New model, and select **CHAP-EWARS Model**. This model suppo
 
 ## 5. Add covariates
 
-Add all additional covariates you imported via the Climate App by typing their names and using underscores instead of spaces (for example `NDVI` or `relative_humidity`). Do not add precipitation or mean temperature, as these are already included by default. Save the model when finished.
+Add all additional covariates you imported via the Climate App by typing their names and using underscores instead of spaces (for example `NDVI` or `relative_humidity`). Also add precipitation or mean temperature. Save the model when finished.
 
 ## 6. Create an evaluation
 

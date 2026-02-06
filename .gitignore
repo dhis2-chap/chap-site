@@ -8,9 +8,16 @@ site/
 
 # Fetched external documentation (synced at build time)
 docs/guides/using-the-modeling-app/
+docs/guides/chap-core/
 
 # Temp directories for external doc fetching
 .modeling-app-temp/
 .*-repo-temp/
 .idea
 .venv
+
+
+overrides/main.html
+
+docs/chap-modeling-platform
+temp_dir/
