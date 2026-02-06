@@ -33,6 +33,7 @@ extra_javascript:
 
 plugins:
   - search
+  - markdown-exec
   - multirepo:
       cleanup: true
   - mkdocs-video:
