@@ -4,8 +4,8 @@ mkdocs-video
 mkdocs-gen-files
 mkdocs-minify-plugin
 ruamel.yaml>=0.18.0
-markdown-exec[ansi]>=1.7
-chap-core @ git+https://github.com/dhis2-chap/chap-core.git@master
+#markdown-exec[ansi]>=1.7
+#chap-core @ git+https://github.com/dhis2-chap/chap-core.git@master
 mkdocs-awesome-pages-plugin
 mkdocs-multirepo-plugin
 pymdown-extensions
