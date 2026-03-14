@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block header %}
+  {% include "thin-header.html" %}
+  {{ super() }}
+{% endblock %}
+
+{% block tabs %}
+  {{ super() }}
+  {% if page and page.url and "chap-modeling-platform" in page.url %}
+  <nav class="doc-subnav">
+    <ul class="doc-subnav__list">
+      <li class="doc-subnav__item"><a href="{{ 'chap-modeling-platform/' | url }}" {% if page.url == "chap-modeling-platform/" or page.url == "chap-modeling-platform/index.html" %}class="active"{% endif %}>Getting Started</a></li>
+      <li class="doc-subnav__item doc-subnav__dropdown">
+        <a href="#" class="doc-subnav__dropdown-toggle {% if 'chap-modeling-platform/external_models' in page.url %}active{% endif %}">Model Developers <span class="doc-subnav__arrow">&#9662;</span></a>
+        <ul class="doc-subnav__dropdown-menu">
+          <li><a href="{{ 'chap-modeling-platform/external_models/' | url }}" {% if "chap-modeling-platform/external_models" in page.url and "chap-modeling-platform/external_models/newcomer" not in page.url %}class="active"{% endif %}>Modeling Documentation</a></li>
+          <li><a href="{{ 'chap-modeling-platform/external_models/newcomer/' | url }}" {% if "chap-modeling-platform/external_models/newcomer" in page.url %}class="active"{% endif %}>Learn modeling with Chap</a></li>   
+        </ul>
+      </li>
+      <li class="doc-subnav__item"><a href="{{ 'chap-modeling-platform/modeling-app/' | url }}" {% if "chap-modeling-platform/modeling-app" in page.url %}class="active"{% endif %}>DHIS2 Implementers</a></li>
+      <li class="doc-subnav__item"><a href="{{ 'chap-modeling-platform/contributor/' | url }}" {% if "chap-modeling-platform/contributor" in page.url %}class="active"{% endif %}>Contributors</a></li>
+      <li class="doc-subnav__item doc-subnav__dropdown">
+        <a href="#" class="doc-subnav__dropdown-toggle {% if 'chap-modeling-platform/kigali-workshop' in page.url %}active{% endif %}">Workshop Material <span class="doc-subnav__arrow">&#9662;</span></a>
+        <ul class="doc-subnav__dropdown-menu">
+          <li><a href="{{ 'chap-modeling-platform/kigali-workshop/kigali-webinar-series/' | url }}" {% if "chap-modeling-platform/kigali-workshop/kigali-webinar-series" in page.url %}class="active"{% endif %}>Modeling Webinar Series</a></li>
+          <li><a href="{{ 'chap-modeling-platform/kigali-workshop/kigali-workshop-material/' | url }}" {% if "chap-modeling-platform/kigali-workshop/kigali-workshop-material" in page.url %}class="active"{% endif %}>Kigali Workshop Material</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <style>
+    .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item > .md-nav__link { display: none; }
+    .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item:not(.md-nav__item--active) { display: none; }
+    .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--active > .md-nav__link { display: none; }
+  </style>
+  {% endif %}
+{% endblock %}
+
+{% block footer %}
+  {% include "footer.html" %}
+{% endblock %}
