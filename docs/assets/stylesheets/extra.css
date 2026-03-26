@@ -11,6 +11,25 @@ h1:first-of-type {
   margin-bottom: 0;
 }
 
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  color: #222222;
+  font-weight: 500;
+  margin-bottom: 0.4em;
+  line-height: 1;
+}
+
+.md-typeset h3 {
+  color: #222222;
+  font-weight: 550;
+  margin-bottom: 0.3em;
+  font-size: 0.98rem;
+  line-height: 1;
+}
+
 article {
   margin-left: 50px !important;
   margin-right: 50px !important;
