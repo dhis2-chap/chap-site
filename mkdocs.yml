@@ -51,7 +51,11 @@ markdown_extensions:
   - codehilite
   - attr_list
   - md_in_html
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed
   - pymdownx.details
   - pymdownx.highlight:

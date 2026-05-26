@@ -10,6 +10,9 @@ dependencies = [
     "mkdocs-gen-files",
     "mkdocs-minify-plugin",
     "pymdown-extensions",
+    "mkdocstrings[python]",
+    "pygments",
+    "markdown-exec[ansi]",
 ]
 
 [project.scripts]
