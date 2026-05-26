@@ -9,3 +9,5 @@ markdown-exec[ansi]>=1.7
 mkdocs-awesome-pages-plugin
 mkdocs-multirepo-plugin
 pymdown-extensions
+mkdocstrings[python]
+pygments
