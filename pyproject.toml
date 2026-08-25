@@ -13,6 +13,8 @@ dependencies = [
     "mkdocstrings[python]",
     "pygments",
     "markdown-exec[ansi]",
+    "mkdocs-panzoom-plugin",
+    "mkdocs-multirepo-plugin",
 ]
 
 [project.scripts]

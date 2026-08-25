@@ -8,6 +8,7 @@ markdown-exec[ansi]>=1.7
 #chap-core @ git+https://github.com/dhis2-chap/chap-core.git@master
 mkdocs-awesome-pages-plugin
 mkdocs-multirepo-plugin
+mkdocs-panzoom-plugin
 pymdown-extensions
 mkdocstrings[python]
 pygments
