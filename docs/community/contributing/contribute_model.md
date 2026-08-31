@@ -13,6 +13,6 @@ If so, the Chap platform is here for you!
 
 ## Requirements
 
-- You have a climate health model published in a peer-reviewed journal or conference that includes a DOI for your publication.
-- This papers describes a climate-informed model of health or agricultural outcomes that is available as open source codebase in a github repository.
+- You have a climate health model described in a publication with a DOI, either published in a peer-reviewed journal or conference, or available as a preprint.
+- This publication describes a climate-informed model of health or agricultural outcomes that is available as open source codebase in a github repository.
 - The model codebase is publicly available on GitHub and has been made compatible with Chap as described above.
