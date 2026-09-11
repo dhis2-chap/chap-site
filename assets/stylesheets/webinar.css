@@ -1,0 +1,45 @@
+/* Layout */
+.webinar-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.webinar-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Changed from space-around to flex-start */
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Card */
+.webinar-card {
+  margin: 0;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 215px;
+  border: 3.5px solid;
+  border-radius: 22px;
+  border-color: #4051b5;
+  padding: 10px 18px 5px 18px;
+  transition: background-color 0.3s ease;
+}
+
+.webinar-card:hover {
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+
+.webinar-card-title {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.webinar-card-subtitle {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.35;
+  max-width: 320px;
+}
