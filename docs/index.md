@@ -10,10 +10,14 @@ hide:
 <!-- === BANNER SECTION === -->
 <div class="dhis2-banner">
   <div class="dhis2-banner-text" style="padding:3rem 1rem;">
-    <h2 style="color:white; font-size:2.2rem;">Chap & Modeling Portal</h2>
+    <h2 style="color:white; font-size:2.2rem;">Chap Modeling Platform</h2>
     <p style="color:white; font-size:1.1rem; max-width:700px; margin:auto;">
       Welcome to the online community for climate and health modeling and forecasting with DHIS2 and the Chap Modeling Platform
     </p>
+    <div style="margin-top: 2rem;">
+      <p style="color:white; font-size:1rem; margin-bottom:0.75rem;">Want to see Chap in action?</p>
+      <a href="https://climate.im.dhis2.org/climate-demo" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:white; color:#002147; font-weight:600; font-size:1.1rem; padding:0.75rem 2rem; border-radius:6px; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.2);">Try the Demo &rarr;</a>
+    </div>
   </div>
   <div class="dhis2-banner-img">
     <img src="assets/images/CHAP-Page-Vizualizations.png" alt="Chap Visualizations">
