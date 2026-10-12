@@ -16,7 +16,8 @@ hide:
     </p>
     <div style="margin-top: 2rem;">
       <p style="color:white; font-size:1rem; margin-bottom:0.75rem;">Want to see Chap in action?</p>
-      <a href="https://climate.im.dhis2.org/climate-demo" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:white; color:#002147; font-weight:600; font-size:1.1rem; padding:0.75rem 2rem; border-radius:6px; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.2);">Try the Demo &rarr;</a>
+      <a id="chap-demo-open" href="https://climate.im.dhis2.org/climate-demo/apps/dhis2-chapmodeling-app#/dashboard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:white; color:#002147; font-weight:600; font-size:1.1rem; padding:0.75rem 2rem; border-radius:6px; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.2);">Try the Demo &rarr;</a>
+      <p id="chap-demo-status" role="status" aria-live="polite" style="display:none; color:white; font-size:0.9rem; margin:0.75rem 0 0;"></p>
     </div>
   </div>
   <div class="dhis2-banner-img">
@@ -120,5 +121,7 @@ hide:
 </div>
 
 ![type:video](https://www.youtube.com/embed/eNLU8BfMVlA?si=vU24qIp8Vy7IySTh)
+
+<script src="assets/javascripts/chap-demo-login.js"></script>
 
 <br>
