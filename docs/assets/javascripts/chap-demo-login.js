@@ -29,12 +29,12 @@
   }
   button.dataset.chapDemoReady = "true";
 
-  function setStatus(text, kind) {
+  function setStatus(text) {
     if (!status) {
       return;
     }
     status.textContent = text;
-    status.className = "chap-demo-status" + (kind ? " chap-demo-status--" + kind : "");
+    status.style.display = text ? "block" : "none";
   }
 
   function showLoadingScreen(tab) {
@@ -96,22 +96,21 @@
     // so pop-up blockers do not stop it. It is navigated once sign-in is done.
     var tab = window.open("about:blank", "_blank");
     if (!tab) {
-      setStatus("Your browser blocked the new tab. Allow pop-ups for this site and try again.", "error");
+      setStatus("Your browser blocked the new tab. Allow pop-ups for this site and try again.");
       return;
     }
     showLoadingScreen(tab);
 
     button.setAttribute("aria-busy", "true");
-    setStatus("Signing in to the demo…", "pending");
+    setStatus("Signing in to the demo…");
     try {
       await signIn();
-      setStatus("Signed in. The demo opened in a new tab.", "success");
+      setStatus("");
     } catch (error) {
       console.warn("[chap-demo] Automatic sign-in failed: " + error.message);
       setStatus(
         "We could not sign you in automatically. Log in with username " +
-        DEMO_USERNAME + " and password " + DEMO_PASSWORD + ".",
-        "error"
+        DEMO_USERNAME + " and password " + DEMO_PASSWORD + "."
       );
     } finally {
       tab.location.href = DASHBOARD_URL;
