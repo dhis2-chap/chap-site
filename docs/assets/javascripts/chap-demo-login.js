@@ -1,5 +1,5 @@
 /*
- * "Try the Demo" on /alternative-home-page/.
+ * "Try the Demo" button on the home page (docs/index.md).
  *
  * Signs the visitor in to the Chap demo DHIS2 instance in the background,
  * then opens the Modeling App dashboard in a new tab. Because chap.dhis2.org
