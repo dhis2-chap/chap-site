@@ -1,0 +1,127 @@
+---
+hide:
+  - title
+  - navigation
+  - toc
+---
+
+#
+
+<!-- === BANNER SECTION === -->
+<div class="dhis2-banner">
+  <div class="dhis2-banner-text" style="padding:3rem 1rem;">
+    <h2 style="color:white; font-size:2.2rem;">Chap Modeling Platform</h2>
+    <p style="color:white; font-size:1.1rem; max-width:700px; margin:auto;">
+      Welcome to the online community for climate and health modeling and forecasting with DHIS2 and the Chap Modeling Platform
+    </p>
+    <div style="margin-top: 2rem;">
+      <p style="color:white; font-size:1rem; margin-bottom:0.75rem;">Want to see Chap in action?</p>
+      <a id="chap-demo-open" href="https://climate.im.dhis2.org/climate-demo/apps/dhis2-chapmodeling-app#/dashboard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:white; color:#002147; font-weight:600; font-size:1.1rem; padding:0.75rem 2rem; border-radius:6px; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.2);">Try the Demo &rarr;</a>
+      <p id="chap-demo-status" role="status" aria-live="polite" style="display:none; color:white; font-size:0.9rem; margin:0.75rem 0 0;"></p>
+    </div>
+  </div>
+  <div class="dhis2-banner-img">
+    <img src="../assets/images/CHAP-Page-Vizualizations.png" alt="Chap Visualizations">
+  </div>
+</div>
+
+---
+
+<!-- === CENTERED INTRO SECTION === -->
+<div class="dhis2-justified">
+  <h3 style="text-align:center">A robust open-source platform for climate and health modeling</h3>
+  <p>
+    Chap is a Climate & Health Modeling Platform that brings together climate health models into a unified ecosystem, connecting researchers and cutting-edge epidimiological models to policy makers and health practitioners. It makes complex modeling workflows accessible, streamlines rigorous model evaluation, and integrates directly with DHIS2, the world's leading health information system.
+  </p>
+    <div style="width: 100%; text-align: center; margin-top: 15px">
+    <a href="../about/" class="dhis2-primary-button">Learn more</a>
+  </div>
+</div>
+
+---
+
+<!-- === LOGO CLOUD / USERS SECTION === -->
+<div class="dhis2-users">
+  <div class="myst-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.5rem; padding:2rem 0;">
+    <div class="myst-card">
+      <div class="myst-card-body">
+        <img src="../assets/images/Modelers_Get-started-icon.svg" alt="Modellers" height="70">
+        <p>
+          <strong>Model developers</strong>
+            <br>
+            <i>You want to build or adapt climate-health prediction models</i>
+          <br>
+          <b><a href="../chap-modeling-platform/external_models/">Get started</a></b>
+        </p>
+      </div>
+    </div>
+    <div class="myst-card">
+      <div class="myst-card-body">
+        <img src="../assets/images/Implementers_Get-started-icon.svg" alt="Implementers" height="70">
+        <p>
+          <strong>DHIS2 Implementers</strong>
+            <br>
+            <i>You want to deploy CHAP within a DHIS2 instance</i>
+          <br>
+          <b><a href="../chap-modeling-platform/modeling-app/">Get started</a></b>
+        </p>
+      </div>
+    </div>
+    <div class="myst-card">
+      <div class="myst-card-body">
+        <img src="../assets/images/Community-icon.svg" alt="Community" height="70">
+        <p>
+          <strong>Community</strong>
+            <br>
+            <i>You want to connect with others working on climate and health</i>
+          <br>
+          <b><a href="../community/support/">Get connected</a></b>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- === JUSTIFIED / FEATURE SECTION === -->
+<div class="modeling-components dhis2-justified">
+  <h3>Chap builds on and integrates with DHIS2 to support real-world use</h3>
+  <div class="dhis2-cards">
+    <div class="dhis2-card">
+      <div class="dhis2-card-body">
+        <img src="../assets/images/Chap_icon.svg" alt="Chap Logo" height="70" class="dark:hidden">
+        <p><strong>Chap Modeling Platform</strong></p>
+        <p>Python-based processing engine for model orchestration, data pipelines, validation, metrics, and hyperparameter tuning. It integrates seamlessly with DHIS2 system for accessing health data and disseminating forecasts, while also functioning as a standalone Python package and command-line tool.</p>
+        <a href="../chap-modeling-platform/" class="dhis2-primary-button">Get started</a>
+      </div>
+    </div>
+    <div class="dhis2-card">
+      <div class="dhis2-card-body">
+        <img src="../assets/images/Modeling_icon.svg" alt="Modeling App Logo" height="70" class="dark:hidden">
+        <p><strong>DHIS2 Modeling App</strong></p>
+        <p>Pilot app for DHIS2 that provides seamless integration with the Chap Modeling Platform, providing a user-friendly interface within DHIS2 for selecting data to use to generate predictions in Chap – including data from the DHIS2 Climate App and Climate Tools – train predictive models, visualize predictions, and evaluate model accuracy.</p>
+        <a href="../chap-modeling-platform/modeling-app/" class="dhis2-primary-button">Get started</a>
+      </div>
+    </div>
+    <div class="dhis2-card">
+      <div class="dhis2-card-body">
+        <img src="../assets/images/climateapp_icon.svg" alt="Climate App Logo" height="70" class="dark:hidden">
+        <p><strong>DHIS2 Climate Data</strong></p>
+        <p>Chap Modeling Platform utilizes <a href="https://dhis2.org/climate/climate-data/" target="_blank">DHIS2 Climate App</a> and <a href="https://climate-tools.dhis2.org/" target="_blank">Climate Tool</a>, which enable flexible incorporation of climate, weather, environmental, and other geospatial data into DHIS2. This data then flows through the DHIS2 Modeling App, where the user could select which data sources to be used by the Chap Modeling Platform for model evaluation and disease prediction.</p>
+        <a href="../climate-data/" class="dhis2-primary-button">Get started</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="dhis2-justified">
+
+  <h3>Learn more about modeling with Chap and DHIS2</h3>
+
+</div>
+
+![type:video](https://www.youtube.com/embed/eNLU8BfMVlA?si=vU24qIp8Vy7IySTh)
+
+<script src="../assets/javascripts/chap-demo-login.js"></script>
+
+<br>
