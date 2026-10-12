@@ -19,8 +19,8 @@
   var DHIS2_BASE = "https://climate.im.dhis2.org/climate-demo";
   var DASHBOARD_URL = DHIS2_BASE + "/apps/dhis2-chapmodeling-app#/dashboard";
   var LOGIN_URL = DHIS2_BASE + "/api/auth/login";
-  var DEMO_USERNAME = "demo";
-  var DEMO_PASSWORD = "Demo123*";
+  var DEMO_USERNAME = "admin";
+  var DEMO_PASSWORD = "district";
 
   var button = document.getElementById("chap-demo-open");
   var status = document.getElementById("chap-demo-status");
