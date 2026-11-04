@@ -12,3 +12,4 @@ mkdocs-panzoom-plugin
 pymdown-extensions
 mkdocstrings[python]
 pygments
+mkdocs-llmstxt

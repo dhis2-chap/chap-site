@@ -46,6 +46,32 @@ plugins:
         height: "auto"
         max-height: "60vh"
         object-fit: "cover"
+  # Writes llms.txt and llms-full.txt, an index of the docs for AI assistants and coding agents.
+  - llmstxt:
+      full_output: llms-full.txt
+      markdown_description: >-
+        Chap (the Chap Modeling Platform) runs climate and health forecasting models, evaluates them
+        and connects them to DHIS2 through the DHIS2 Modeling App.
+        A Chap model is a train script and a predict script in R or Python, plus an MLproject file
+        that describes them. It is evaluated locally with `chap eval --run-config.as-chapkit`,
+        from the `chap-core` package (`uv tool install chap-core`), and deployed as a chapkit Docker image.
+        A model developer does not install chapkit separately, does not run the chap-core
+        `docker compose` stack and does not need `chapkit mlproject migrate`.
+        Start with "Getting started as a model developer" and "Bring your existing model to Chap".
+      sections:
+        Model developers:
+          # Getting started first, then everything else.
+          - chap-modeling-platform/external_models/index.md
+          - chap-modeling-platform/external_models/setup.md
+          - chap-modeling-platform/external_models/existing_model.md
+          - chap-modeling-platform/external_models/mlproject_tutorial.md
+          - chap-modeling-platform/external_models/*.md
+          - chap-modeling-platform/chap-cli/*.md
+        DHIS2 implementers:
+          - chap-modeling-platform/modeling-app/*.md
+        About Chap:
+          - index.md
+          - about/*.md
 
 markdown_extensions:
   - toc:
