@@ -1,0 +1,76 @@
+# Enabling Optional Model Services
+
+Some models require an external service to be running alongside Chap. These services are not started by default but can be enabled using a Docker Compose overlay file.
+
+Note
+
+This page covers models that are **not** in the [Chap Marketplace](https://chap-marketplace.dhis2.org). Marketplace models are installed with `chap-admin install-all` (see [First-time Setup](https://chap.dhis2.org/chap-modeling-platform/modeling-app/fresh-installation/#5-install-the-models)) and need no config edits or rebuild. Use the steps below only for additional services like `ewars_plus` or `chtorch`. `chtorch` is a chapkit service: it registers a model template on its own but gets no configuration, so add one as described in [Give it a configuration](https://chap.dhis2.org/chap-modeling-platform/modeling-app/running-your-own-model/#5-give-it-a-configuration).
+
+To add a model service of your **own**, see [Running Your Own Model](https://chap.dhis2.org/chap-modeling-platform/modeling-app/running-your-own-model/index.md).
+
+## Available Optional Services
+
+| Service      | Image                                         | Port | Description                       |
+| ------------ | --------------------------------------------- | ---- | --------------------------------- |
+| `ewars_plus` | `maquins/ewars_plus_api:Upload`               | 3288 | EWARS Plus R-based prediction API |
+| `chtorch`    | `ghcr.io/dhis2-chap/chtorch:chapkit2-8f17ee3` | 5001 | Deep learning model using chapkit |
+
+## Setup
+
+Chap ships with a `compose.override.yml.example` file that defines these optional services.
+
+Pass `-f compose.override.yml` explicitly
+
+Compose only merges `compose.override.yml` on its own when you run a bare `docker compose` with no `-f` flags at all. As soon as you pass any `-f` — as [First-time Setup](https://chap.dhis2.org/chap-modeling-platform/modeling-app/fresh-installation/index.md) does — the override file is ignored, silently and with no error, so the optional services never start. The commands below assume the `compose.marketplace.yml` file that `chap-admin` writes in that guide; adjust them to match how you started Chap, keeping `compose.override.yml` last.
+
+### 1. Copy the overlay file
+
+```console
+cp compose.override.yml.example compose.override.yml
+```
+
+### 2. Edit the overlay (optional)
+
+Open `compose.override.yml` and remove any services you do not need. For example, to enable only EWARS Plus:
+
+```yaml
+services:
+  ewars_plus:
+    image: maquins/ewars_plus_api:Upload
+    container_name: ewars_plus
+    ports:
+      - "3288:3288"
+```
+
+### 3. Add the model to configured models
+
+The model also needs to be registered so that Chap seeds it on startup. Create or edit a YAML file in `config/configured_models/` (do **not** edit `default.yaml`):
+
+```yaml
+# config/configured_models/local.yaml
+- url: https://github.com/dhis2-chap/ewars_plus_python_wrapper/
+  versions:
+    v1: "@<commit-sha>"  # the full sha of the commit to run; branches are rejected
+```
+
+See [Managing models](https://chap.dhis2.org/chap-modeling-platform/modeling-app/managing-model-templates/index.md) for details on the configured models format.
+
+### 4. Rebuild and start
+
+After adding the overlay and the model configuration, rebuild the Chap images (so the new config is included) and start all services:
+
+```console
+docker compose -f compose.yml -f compose.marketplace.yml -f compose.override.yml build chap worker
+docker compose -f compose.yml -f compose.marketplace.yml -f compose.override.yml up -d
+```
+
+### 5. Verify
+
+Check that the service is running and the model appears in the API:
+
+```console
+docker compose -f compose.yml -f compose.marketplace.yml -f compose.override.yml ps
+curl http://localhost:8000/v1/crud/configured-models
+```
+
+The model (e.g. `ewars_plus`) should appear in the list of configured models.
