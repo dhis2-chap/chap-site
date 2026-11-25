@@ -711,3 +711,14 @@ footer.article a:hover {
   overflow: hidden;
 }
 
+
+/* ============================================
+   Tables
+   ============================================ */
+
+/* Keep permission names on one line instead of breaking them mid-word.
+   The table is wrapped in <div class="permission-table" markdown> in its page. */
+.md-typeset .permission-table td:first-child code {
+  white-space: nowrap;
+  word-break: normal;
+}
