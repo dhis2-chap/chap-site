@@ -1,0 +1,96 @@
+# 1. Installing Chap for model developers
+
+In this guide, you'll install the Chap command-line tool. Once installed, you can run `chap eval` to test any model against real datasets — which you'll do in the next guide in this session.
+
+**Reminder:** Windows users, use WSL (Windows Subsystem for Linux) as covered in [Prepare for installation](https://chap.dhis2.org/chap-modeling-platform/external_models/prepare-for-installation/index.md).
+
+## Installing Chap
+
+Install Chap as a global tool using uv:
+
+```bash
+uv tool install chap-core --python 3.13
+```
+
+This installs the `chap` command-line tool globally, making it available from any directory.
+
+## Running marketplace models
+
+With Docker and Docker Compose v2 installed, use a model ID from the [Chap Marketplace](https://chap-marketplace.dhis2.org). The commands below select `channels.stable` and require that version to be `verified`. They do not select the `latest` channel or an unreviewed version. Marketplace verification checks the model revision and chapkit service, not forecast quality. Templates for model authors cannot be run as forecasting models.
+
+Installing a model into a deployment is done with `chap-admin`, which comes with the same package and talks to the running CHAP instance over its REST API. From the directory containing your running CHAP Compose deployment:
+
+```bash
+chap-admin install chapkit_simple_multistep_model
+chap-admin update chapkit_simple_multistep_model
+```
+
+`chap-admin install-all` installs every model the marketplace lists with a verified stable version, skipping the ones already installed. It is the way to get a fresh deployment populated with models.
+
+`chap-admin update-all` updates every installed marketplace model whose verified stable version has changed in the marketplace, and leaves the rest running. Custom models and models installed from another registry are not touched. Running `chap-admin install-all && chap-admin update-all` keeps a deployment in sync with the marketplace.
+
+`chap-admin` reaches CHAP at `http://localhost:8000` unless `CHAP_URL` or `--url` says otherwise, and sends `CHAP_API_TOKEN` or `--token` when the deployment requires a token. It reads both from the environment, not from a deployment's `.env` file.
+
+Installing does three things, in this order:
+
+1. The model service is pulled and started on the deployment network, pinned to the verified image.
+1. Once the service has registered with CHAP and reports the verified commit, CHAP stores its model template from what the service itself describes, including its configuration options, and the model's verified configurations are added from the marketplace entry. The model then shows up in the Modeling App with the reviewed ways to run it.
+1. The service is written into `compose.marketplace.yml` beside the first base file.
+
+A service that does not start, does not register within a minute, reports another commit than the verified one, or registers under another model's id is removed again, and the template its registration stored is retired, so a broken image cannot be installed. The same happens if adding the configurations fails or the command is interrupted. The command can be repeated.
+
+Updating registers the new version as a new template version with its configurations. Earlier versions and the evaluations made with them are untouched. Before the new container starts, the old container's registration in CHAP is dropped so the new one is what gets registered; when the deployment sets `SERVICEKIT_REGISTRATION_KEY`, export it in the shell running `chap-admin` too. A failed update restores the previous container and the previous template version.
+
+If your deployment uses a different base file, supply it, followed by any overlays other than `compose.marketplace.yml` (which chap-admin adds itself), in the same order as when starting CHAP. `compose.yml` and `compose.ghcr.yml` are alternatives, so pass only one of them:
+
+```bash
+chap-admin install chapkit_simple_multistep_model --compose-file compose.ghcr.yml
+```
+
+Because the commands name the base file explicitly, Docker Compose does not load `compose.override.yml` on its own. List it with `--compose-file` as well if your deployment uses one.
+
+Include `compose.marketplace.yml` in subsequent Docker Compose commands, for example `docker compose -f compose.yml -f compose.marketplace.yml up -d`. Continue using your deployment's existing `COMPOSE_PROJECT_NAME` and environment settings. `SERVICEKIT_REGISTRATION_KEY` is passed to the model containers when set in the environment or the deployment's `.env` file. `chap-admin` itself reads it only from the shell.
+
+Only the selected model is pulled and started. Updates preserve its data volume and Compose settings; failed updates attempt to restart the previous image. Use `--platform linux/amd64` for models that only publish AMD64 images, such as R-INLA models on Apple Silicon. The platform is retained for subsequent updates.
+
+### Removing a model
+
+```bash
+chap-admin uninstall chapkit_simple_multistep_model
+```
+
+Every version of the model template and their configured models are retired in CHAP so they leave the pickers; they are never deleted, since evaluations reference them. The service is then stopped and removed. The model's data volume is kept so a later install resumes from it; pass `--delete-data` to remove it permanently. Uninstalling the last model leaves `compose.marketplace.yml` in place with no services, so you can keep passing it to Docker Compose.
+
+### A different model registry
+
+By default the commands read models from the [dhis2-chap/chap-marketplace](https://github.com/dhis2-chap/chap-marketplace) repository, which the Chap Marketplace site is also built from. Set `CHAP_MARKETPLACE_URL` in your shell to resolve models from another registry, such as one hosting your organisation's own models. The commands read it from the environment, not from a deployment's `.env` file. Its models are not marketplace-reviewed, so installation and updates require `--accept-risk`:
+
+```bash
+export CHAP_MARKETPLACE_URL=https://models.example.org/registry
+chap-admin install my_org_model --accept-risk
+```
+
+### Custom chapkit models
+
+Custom images must implement the chapkit service API on port 8000 and support chapkit self-registration. They are not marketplace-reviewed. You accept responsibility for running their code, sharing data with them, and using their forecasts. Both installation and updates require `--accept-risk`:
+
+```bash
+chap-admin install my_model --image ghcr.io/my-org/my-model:v1 --accept-risk
+chap-admin update my_model --image ghcr.io/my-org/my-model:v2 --accept-risk
+```
+
+A custom image is installed the same way, from what the running service describes, but has no marketplace entry to take configurations from, so it gets one default configuration. It is refused if it registers under the id of a model that another installation already serves. An update is refused if the new image registers under another id than the installed one, since that is another model: uninstall the old one and install the new image instead. Updating a custom model without `--image` pulls its existing image reference again; it never switches to a marketplace model automatically. Prefer version tags or digests for reproducible custom installations.
+
+## Exercise
+
+### Verify your installation
+
+Run the following command:
+
+```bash
+chap --help
+```
+
+You should see output listing available commands including `eval`, `plot-backtest`, and `export-metrics`.
+
+**Verification:** If you see the help output with available commands, Chap is installed correctly. You're ready for the next guide: [Implement your own model from a minimalist example](https://chap.dhis2.org/chap-modeling-platform/kigali-workshop/kigali-webinar-series/session-3/fork-example/index.md).

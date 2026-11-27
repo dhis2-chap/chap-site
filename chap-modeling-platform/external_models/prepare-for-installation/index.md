@@ -1,0 +1,104 @@
+# Prepare for Installing Chap Cli - setting development environment
+
+By the end of this guide, you will know how to use tools like **uv** (Python) or **renv** (R) to more easily get code up and running on your machine.
+
+______________________________________________________________________
+
+## Chap on Windows
+
+Chap Core requires **WSL2 (Windows Subsystem for Linux 2)** to run on Windows. Install Chap within your WSL2 Ubuntu environment, not on the Windows filesystem, as installing Chap on the WSL2 Ubuntu environment significantly improves performance.
+
+### Install and Open WSL2
+
+1. **Install WSL2:** Follow the [official WSL2 installation guide](https://learn.microsoft.com/en-us/windows/wsl/install)
+1. Open the **WSL** terminal from your Windows Start Menu by searching for "WSL"
+1. On first launch, you'll be prompted to create a Unix username and password.
+1. Create a projects directory within Ubuntu/WSL2:
+
+```console
+mkdir -p ~/projects
+```
+
+1. Navigate to your projects folder:
+
+```console
+cd ~/projects
+```
+
+1. Within this folder, you will later clone and install chap-core. When referring to the *terminal* later in this guide, please execute these commands within this folder using WSL2.
+
+## What Are Virtual Environments?
+
+A **virtual environment** is an isolated space where your project's dependencies (packages and libraries) live separately from other projects. Without isolation, installing packages for one project can break another — for example, if Project A needs `pandas 1.5` but Project B needs `pandas 2.0`.
+
+Virtual environments solve this by giving each project its own set of packages.
+
+______________________________________________________________________
+
+## Why Virtual environments?
+
+| Tool       | What it isolates                    | When to use                                   |
+| ---------- | ----------------------------------- | --------------------------------------------- |
+| **venv**   | Python packages                     | Learning, simple Python projects              |
+| **uv**     | Python packages                     | Python projects (faster, recommended)         |
+| **renv**   | R packages                          | R projects, local development                 |
+| **Docker** | Everything (OS, language, packages) | Sharing code, deployment, cross-platform work |
+
+**uv** and **renv** isolate *packages* — your project gets its own folder of dependencies. You need **one of** these depending on whether you use Python or R.
+
+**Docker** goes further — it isolates the *entire environment* including the operating system. If code runs in a Docker container on your machine, it runs identically on any other machine. Chap uses Docker to ensure models work the same everywhere. Docker is optional for local development but required if you want to run or share containerized models.
+
+______________________________________________________________________
+
+## 1. Python Virtual Environments (venv)
+
+Python includes a built-in module called `venv` for creating virtual environments. Understanding how `venv` works helps you appreciate what tools like `uv` automate.
+
+### Create a virtual environment
+
+```console
+python -m venv .venv
+```
+
+This creates a `.venv` folder containing a copy of the Python interpreter and a place for installed packages.
+
+### Activate the environment
+
+```console
+source .venv/bin/activate
+```
+
+When activated, your terminal prompt changes (usually showing `(.venv)`) and `python` points to the virtual environment's interpreter.
+
+**Further reading:** [Python venv documentation](https://docs.python.org/3/library/venv.html)
+
+______________________________________________________________________
+
+## 2. Install uv
+
+**uv** is a fast, modern replacement for `venv` + `pip`. It creates virtual environments and manages packages automatically — no need to activate/deactivate manually. We recommend uv for Chap projects.
+
+**Official guide:** [docs.astral.sh/uv/getting-started/installation](https://docs.astral.sh/uv/getting-started/installation/)
+
+**macOS**
+
+```console
+brew install uv
+```
+
+**Linux / WSL (Ubuntu/Debian)**
+
+```console
+curl -LsSf https://astral.sh/uv/install.sh | sh
+source $HOME/.local/bin/env
+```
+
+### Verify
+
+```console
+uv --version
+```
+
+You should see something like `uv 0.9.0`.
+
+______________________________________________________________________

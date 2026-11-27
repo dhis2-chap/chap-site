@@ -1,0 +1,236 @@
+# Evaluation Workflow: Comparing Models with CLI
+
+This guide walks through the complete workflow for evaluating models, visualizing results, and comparing metrics using the Chap CLI.
+
+## Overview
+
+The workflow consists of three main steps:
+
+1. **eval**: Run a backtest and export results to NetCDF format
+1. **plot-backtest**: Generate visualizations from evaluation results
+1. **export-metrics**: Compare metrics across multiple evaluations in CSV format
+
+To keep the model, dataset and settings in one directory and run `chap eval` without options, see [Chap Projects](https://chap.dhis2.org/chap-modeling-platform/chap-cli/projects/index.md).
+
+## Prerequisites
+
+- Chap Core installed (see [Setup guide](https://chap.dhis2.org/chap-modeling-platform/chap-cli/chap-core-cli-setup/index.md))
+- A dataset CSV file with disease case data
+- A GeoJSON file with region polygons (optional, auto-discovered if named same as CSV)
+
+## Verify Installation
+
+Before starting, verify that the CLI tools are installed correctly:
+
+```bash
+chap eval --help
+```
+
+```bash
+chap plot-backtest --help
+```
+
+```bash
+chap export-metrics --help
+```
+
+## Example Dataset
+
+Chap includes a small example dataset for testing and learning:
+
+- `example_data/laos_subset.csv` - Monthly dengue data for 3 provinces (2010-2012)
+- `example_data/laos_subset.geojson` - Matching polygon boundaries
+
+This dataset contains 108 rows with rainfall, temperature, disease cases, and population data for Bokeo, Vientiane, and Savannakhet provinces.
+
+## Step 1: Create an Evaluation
+
+Use `eval` to run a backtest on a model and export results to NetCDF format.
+
+### Standard Models (GitHub URL or Local Directory)
+
+For models hosted on GitHub or cloned locally:
+
+```console
+chap eval \
+    --model-name https://github.com/dhis2-chap/minimalist_example_r \
+    --dataset-csv ./data/vietnam_data.csv \
+    --output-file ./results/model_a_eval.nc \
+    --backtest-params.n-periods 3 \
+    --backtest-params.n-splits 7
+```
+
+Or using a local directory:
+
+```console
+chap eval \
+    --model-name /path/to/minimalist_example_r \
+    --dataset-csv ./data/vietnam_data.csv \
+    --output-file ./results/model_a_eval.nc \
+    --backtest-params.n-periods 3 \
+    --backtest-params.n-splits 7
+```
+
+### Parameters
+
+| Parameter                         | Description                                                     | Default   |
+| --------------------------------- | --------------------------------------------------------------- | --------- |
+| `--model-name`                    | Model path or GitHub URL                                        | Required  |
+| `--dataset-csv`                   | Path to CSV with disease data                                   | Required  |
+| `--output-file`                   | Path for output NetCDF file                                     | Required  |
+| `--backtest-params.n-periods`     | Forecast horizon (periods ahead)                                | 3         |
+| `--backtest-params.n-splits`      | Number of test windows to evaluate                              | 7         |
+| `--backtest-params.stride`        | Step size between splits                                        | 1         |
+| `--model-configuration-yaml`      | Optional YAML with model config                                 | None      |
+| `--run-config.ignore-environment` | Skip environment setup                                          | false     |
+| `--run-config.debug`              | Enable debug logging                                            | false     |
+| `--run-config.run-directory-type` | Directory handling: `latest`, `timestamp`, or `use_existing`    | timestamp |
+| `--historical-context-years`      | Years of historical data for plot context                       | 6         |
+| `--data-source-mapping`           | JSON file mapping model covariate names to CSV columns          | None      |
+| `--dry-run`                       | Write data files and print commands without executing the model | false     |
+
+For detailed parameter descriptions and examples, see the [eval Reference](https://chap.dhis2.org/chap-modeling-platform/chap-cli/eval-reference/index.md).
+
+### GeoJSON Auto-Discovery
+
+If your dataset is `vietnam_data.csv`, Chap will automatically look for `vietnam_data.geojson` in the same directory.
+
+## Step 2: Visualize the Evaluation
+
+Use `plot-backtest` to generate visualizations from the evaluation results:
+
+```console
+chap plot-backtest \
+    --input-file ./results/model_a_eval.nc \
+    --output-file ./results/model_a_plot.html \
+    --plot-type evaluation_plot
+```
+
+### Available Plot Types
+
+| Plot Type                    | Description                                                                    |
+| ---------------------------- | ------------------------------------------------------------------------------ |
+| `evaluation_plot`            | Evaluation summary plot with forecasts vs observations and uncertainty bands   |
+| `horizon_location_grid`      | Grid of forecast intervals and metrics across locations and forecast horizons  |
+| `predicted_vs_actual`        | Scatter of predicted (median) vs actual values, faceted by horizon             |
+| `predicted_vs_actual_linear` | Predicted (median) vs actual values on linear axes, faceted by horizon         |
+| `sample_bias_by_horizon`     | Ratio of forecast samples above truth per forecast horizon                     |
+| `sample_bias_by_time_period` | Ratio of forecast samples above truth over time periods, one line per location |
+
+### Output Formats
+
+The output format is determined by file extension:
+
+- `.html` - Interactive HTML (recommended)
+- `.png` - Static PNG image
+- `.svg` - Vector SVG image
+- `.pdf` - PDF document
+- `.json` - Vega JSON specification
+
+## Step 3: Create Another Evaluation
+
+Run the same process with a different model for comparison:
+
+```console
+chap eval \
+    --model-name https://github.com/chap-models/chap_auto_ewars_weekly \
+    --dataset-csv ./data/vietnam_data.csv \
+    --output-file ./results/model_b_eval.nc \
+    --backtest-params.n-periods 3 \
+    --backtest-params.n-splits 7
+```
+
+## Step 4: Export and Compare Metrics
+
+Use `export-metrics` to compute metrics from multiple evaluations and export to CSV:
+
+```bash
+chap export-metrics \
+    --input-files example_data/example_evaluation.nc example_data/example_evaluation_2.nc \
+    --output-file ./comparison_doctest.csv
+```
+
+`--input-files` takes any number of files, so a shell pattern such as `--input-files output/*.nc` compares every evaluation in a directory.
+
+```bash
+rm -f ./comparison_doctest.csv
+```
+
+### Output Format
+
+The CSV contains one row per evaluation with metadata and metric columns:
+
+```text
+filename,model_name,model_version,rmse_aggregate,mae_aggregate,crps,ratio_within_10th_90th,ratio_within_25th_75th
+model_a_eval.nc,minimalist_example_r,1.0.0,45.2,32.1,0.045,0.85,0.65
+model_b_eval.nc,chap_auto_ewars_weekly,2.0.0,38.7,28.4,0.038,0.88,0.70
+```
+
+### Available Metrics
+
+| Metric ID                | Description                                      |
+| ------------------------ | ------------------------------------------------ |
+| `rmse_aggregate`         | Root Mean Squared Error (across all data)        |
+| `mae_aggregate`          | Mean Absolute Error (across all data)            |
+| `crps`                   | Continuous Ranked Probability Score              |
+| `ratio_within_10th_90th` | Coverage ratio for 10th-90th percentile interval |
+| `ratio_within_25th_75th` | Coverage ratio for 25th-75th percentile interval |
+
+### Selecting Specific Metrics
+
+To export only specific metrics:
+
+```bash
+chap export-metrics \
+    --input-files example_data/example_evaluation.nc example_data/example_evaluation_2.nc \
+    --output-file ./comparison_specific_doctest.csv \
+    --metric-ids rmse \
+    --metric-ids mae \
+    --metric-ids crps
+```
+
+```bash
+rm -f ./comparison_specific_doctest.csv
+```
+
+## Complete Example: Standard Models
+
+Here's a complete workflow using the included example dataset (`example_data/laos_subset.csv`) with a minimal model for fast testing:
+
+```bash
+# Step 1: Evaluate model
+chap eval \
+    --model-name tests/fixture_models/naive_python_model_uv \
+    --dataset-csv example_data/laos_subset.csv \
+    --output-file ./eval_doctest.nc \
+    --backtest-params.n-splits 2 \
+    --backtest-params.n-periods 1
+```
+
+```bash
+# Step 2: Plot results
+chap plot-backtest \
+    --input-file ./eval_doctest.nc \
+    --output-file ./plot_doctest.html
+```
+
+```bash
+# Step 3: Export metrics
+chap export-metrics \
+    --input-files ./eval_doctest.nc \
+    --output-file ./metrics_doctest.csv
+```
+
+```bash
+# Cleanup
+rm -f ./eval_doctest.nc ./plot_doctest.html ./metrics_doctest.csv
+```
+
+The GeoJSON file `example_data/laos_subset.geojson` is automatically discovered since it has the same base name as the CSV.
+
+## Tips
+
+- **Consistent parameters**: Use the same `n-periods` and `n-splits` when comparing models
+- **Same dataset**: Always use identical datasets for fair comparison
+- **Multiple runs**: Consider running evaluations with different random seeds for robustness
+- **Metric interpretation**: Lower RMSE/MAE/CRPS is better; higher coverage ratios indicate better calibrated uncertainty
